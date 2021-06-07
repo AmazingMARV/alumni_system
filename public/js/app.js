@@ -5394,6 +5394,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -45153,43 +45154,9 @@ var render = function() {
                               { staticClass: "buttons" },
                               [
                                 _c(
-                                  "button",
-                                  {
-                                    staticClass: "button is-small is-danger",
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.confirmDelete(
-                                          props.row.user_id
-                                        )
-                                      }
-                                    }
-                                  },
-                                  [
-                                    _c("i", { staticClass: "fa fa-trash-o" }),
-                                    _vm._v("  DELETE")
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "button is-small is-success is-outlined",
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.modalReset(props.row.user_id)
-                                      }
-                                    }
-                                  },
-                                  [
-                                    _c("i", { staticClass: "fa fa-refresh" }),
-                                    _vm._v("  RESET")
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
                                   "b-dropdown",
                                   {
+                                    staticClass: "mr-1",
                                     attrs: {
                                       position: "is-bottom-right",
                                       "aria-role": "list"
@@ -45285,9 +45252,50 @@ var render = function() {
                                         }
                                       },
                                       [_vm._v("Employment Information")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "b-dropdown-item",
+                                      {
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.confirmDelete(
+                                              props.row.user_id
+                                            )
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _c("b-icon", {
+                                          attrs: { pack: "fa", icon: "trash" }
+                                        }),
+                                        _vm._v(
+                                          "\n                                        Delete\n                                    "
+                                        )
+                                      ],
+                                      1
                                     )
                                   ],
                                   1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "button is-small is-success is-outlined",
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.modalReset(props.row.user_id)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("i", { staticClass: "fa fa-refresh" }),
+                                    _vm._v(
+                                      "  \n                                RESET\n                            "
+                                    )
+                                  ]
                                 )
                               ],
                               1

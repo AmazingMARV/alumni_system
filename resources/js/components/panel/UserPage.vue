@@ -57,31 +57,32 @@
                         </b-table-column>
 
                         <b-table-column field="" label="Action" v-slot="props">
-                                <div class="buttons">
-                                     <button class="button is-small is-danger" @click="confirmDelete(props.row.user_id)">
-                                     <i class="fa fa-trash-o"></i>&nbsp;&nbsp;DELETE</button>
-                                <button class="button is-small is-success is-outlined" @click="modalReset(props.row.user_id)">
-                                     <i class="fa fa-refresh"></i>&nbsp;&nbsp;RESET</button>
+                            <div class="buttons">
+                                <b-dropdown position="is-bottom-right" aria-role="list" class="mr-1">
+                                        <template #trigger>
+                                            <b-button
+                                            label="EDIT PROFILE"
+                                            type="is-link"
+                                            class="is-small"
+                                            icon-right ="menu-down"/>
+                                        </template>
+                                        <b-dropdown-item tag="a" :href="`/panel/user-page/`+props.row.user_id+`/edit`">Personal Information</b-dropdown-item>
+                                        <b-dropdown-item tag="a" :href="`/panel/user-education-page/`+props.row.user_id">Educational Information</b-dropdown-item>
+                                        <b-dropdown-item tag="a" :href="`/panel/user-eligibility-page/`+props.row.user_id">Eligibility</b-dropdown-item>
+                                        <b-dropdown-item tag="a" :href="`/panel/address-page/`+props.row.user_id+`/edit`">Addresses</b-dropdown-item>
+                                        <b-dropdown-item tag="a" :href="`/panel/employment-page/`+props.row.user_id+`/edit`">Employment Information</b-dropdown-item>
+                                        <b-dropdown-item
+                                            @click="confirmDelete(props.row.user_id)">
+                                            <b-icon pack="fa" icon='trash'></b-icon>
+                                            Delete
+                                        </b-dropdown-item>
+                                    </b-dropdown>
 
-                                     <b-dropdown position="is-bottom-right" aria-role="list">
-                                         <template #trigger>
-                                             <b-button
-                                             label="EDIT PROFILE"
-                                             type="is-link"
-                                             class="is-small"
-                                             icon-right ="menu-down"/>
-                                         </template>
-
-                                            <b-dropdown-item tag="a" :href="`/panel/user-page/`+props.row.user_id+`/edit`">Personal Information</b-dropdown-item>
-                                            <b-dropdown-item tag="a" :href="`/panel/user-education-page/`+props.row.user_id">Educational Information</b-dropdown-item>
-                                            <b-dropdown-item tag="a" :href="`/panel/user-eligibility-page/`+props.row.user_id">Eligibility</b-dropdown-item>
-                                            <b-dropdown-item tag="a" :href="`/panel/address-page/`+props.row.user_id+`/edit`">Addresses</b-dropdown-item>
-                                            <b-dropdown-item tag="a" :href="`/panel/employment-page/`+props.row.user_id+`/edit`">Employment Information</b-dropdown-item>
-
-
-                                     </b-dropdown>
-                                </div>
-
+                                    <button class="button is-small is-success is-outlined" @click="modalReset(props.row.user_id)">
+                                    <i class="fa fa-refresh"></i>&nbsp;&nbsp;
+                                    RESET
+                                </button>
+                            </div>
                         </b-table-column>
 
                     </b-table>
