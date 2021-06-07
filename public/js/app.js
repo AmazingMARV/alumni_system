@@ -5395,6 +5395,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -45197,7 +45210,13 @@ var render = function() {
                                             "/edit"
                                         }
                                       },
-                                      [_vm._v("Personal Information")]
+                                      [
+                                        _c("b-icon", {
+                                          attrs: { pack: "fa", icon: "user" }
+                                        }),
+                                        _vm._v("Personal Information")
+                                      ],
+                                      1
                                     ),
                                     _vm._v(" "),
                                     _c(
@@ -45210,7 +45229,18 @@ var render = function() {
                                             props.row.user_id
                                         }
                                       },
-                                      [_vm._v("Educational Information")]
+                                      [
+                                        _c("b-icon", {
+                                          attrs: {
+                                            pack: "fa",
+                                            icon: "graduation-cap"
+                                          }
+                                        }),
+                                        _vm._v(
+                                          "Educational Information\n                                    "
+                                        )
+                                      ],
+                                      1
                                     ),
                                     _vm._v(" "),
                                     _c(
@@ -45223,7 +45253,18 @@ var render = function() {
                                             props.row.user_id
                                         }
                                       },
-                                      [_vm._v("Eligibility")]
+                                      [
+                                        _c("b-icon", {
+                                          attrs: {
+                                            pack: "fa",
+                                            icon: "file-text-o"
+                                          }
+                                        }),
+                                        _vm._v(
+                                          "\n                                        Eligibility\n                                    "
+                                        )
+                                      ],
+                                      1
                                     ),
                                     _vm._v(" "),
                                     _c(
@@ -45237,7 +45278,18 @@ var render = function() {
                                             "/edit"
                                         }
                                       },
-                                      [_vm._v("Addresses")]
+                                      [
+                                        _c("b-icon", {
+                                          attrs: {
+                                            pack: "fa",
+                                            icon: "map-marker"
+                                          }
+                                        }),
+                                        _vm._v(
+                                          "\n                                        Addresses\n                                    "
+                                        )
+                                      ],
+                                      1
                                     ),
                                     _vm._v(" "),
                                     _c(
@@ -45251,7 +45303,15 @@ var render = function() {
                                             "/edit"
                                         }
                                       },
-                                      [_vm._v("Employment Information")]
+                                      [
+                                        _c("b-icon", {
+                                          attrs: { pack: "fa", icon: "users" }
+                                        }),
+                                        _vm._v(
+                                          "\n                                        Employment Information\n                                    "
+                                        )
+                                      ],
+                                      1
                                     ),
                                     _vm._v(" "),
                                     _c(
