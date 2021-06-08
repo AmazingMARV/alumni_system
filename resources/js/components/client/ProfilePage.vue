@@ -13,6 +13,7 @@
                                      <div>
                                          <img :src="fields.profile_image" @click="openModal" alt="..." class="img-wrapper"/>
                                      </div>
+
                                      <b-field class="file" :class="{'has-name' : !fields.image}">
                                             <b-upload v-model="fields.image" class="file-label">
                                                 <span class="file-cta">
@@ -51,16 +52,16 @@
                                     <!-- Sex -->
                                     <div class="columns">
                                         <div class="column">
-                                            <b-field label="Sex">
-                                                <b-select placeholder="Sex"  v-model="fields.sex" required >
+                                            <b-field label="Sex" expanded>
+                                                <b-select placeholder="Sex"  v-model="fields.sex" expanded required >
                                                     <option value="MALE">MALE</option>
                                                     <option value="FEMALE">FEMALE</option>
                                                 </b-select>
                                              </b-field>
                                         </div>
                                         <div class="column">
-                                        <b-field label="Civil Status">
-                                                <b-select placeholder="Civil Status"  v-model="fields.civil_status" required >
+                                        <b-field label="Civil Status" expanded>
+                                                <b-select placeholder="Civil Status" expanded v-model="fields.civil_status" required >
                                                     <option value="Single">Single</option>
                                                     <option value="Married">Married</option>
                                                     <option value="Separated">Separated</option>
@@ -70,8 +71,8 @@
                                         </div>
 
                                         <div class="column">
-                                        <b-field label="Membership Classification">
-                                                <b-select placeholder="Membership Classification"  v-model="fields.alumni_classification" required >
+                                        <b-field label="Membership Classification" expanded>
+                                                <b-select placeholder="Membership Classification" expanded v-model="fields.alumni_classification" required >
                                                     <option value="Associate">Associate</option>
                                                     <option value="Honorary">Honorary</option>
                                                     <option value="Regular">Regular</option>
@@ -90,15 +91,10 @@
                                                 <b-input type="text" placeholder="Facebook Account" v-model="fields.fb_account" ></b-input>
                                             </b-field>
                                         </div>
-                                       
-
                                     </div>
                                     
-    
-
                                      <!-- Course -->
                                     <div class="columns">
-
                                          <div class="column">
                                             <b-field label="Contact Number" expanded>
                                                 <b-input type="text" placeholder="Contact Number" v-model="fields.contact_number" ></b-input>
@@ -107,8 +103,8 @@
 
                                         <!-- Course -->
                                         <div class="column">
-                                            <b-field label="Programs" >
-                                                <b-select placeholder="Programs" v-model="fields.program" required >
+                                            <b-field label="Programs" expanded>
+                                                <b-select placeholder="Programs" expanded v-model="fields.program" required >
                                                     <option v-for="(program, index) in programs" :key="index" :value="program.program">{{ program.program }}</option>
                                                 </b-select>
                                             </b-field>

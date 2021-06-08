@@ -2895,10 +2895,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['dataPrograms'],
   data: function data() {
@@ -37739,13 +37735,14 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    { attrs: { label: "Sex" } },
+                                    { attrs: { label: "Sex", expanded: "" } },
                                     [
                                       _c(
                                         "b-select",
                                         {
                                           attrs: {
                                             placeholder: "Sex",
+                                            expanded: "",
                                             required: ""
                                           },
                                           model: {
@@ -37783,13 +37780,19 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    { attrs: { label: "Civil Status" } },
+                                    {
+                                      attrs: {
+                                        label: "Civil Status",
+                                        expanded: ""
+                                      }
+                                    },
                                     [
                                       _c(
                                         "b-select",
                                         {
                                           attrs: {
                                             placeholder: "Civil Status",
+                                            expanded: "",
                                             required: ""
                                           },
                                           model: {
@@ -37845,7 +37848,8 @@ var render = function() {
                                     "b-field",
                                     {
                                       attrs: {
-                                        label: "Membership Classification"
+                                        label: "Membership Classification",
+                                        expanded: ""
                                       }
                                     },
                                     [
@@ -37855,6 +37859,7 @@ var render = function() {
                                           attrs: {
                                             placeholder:
                                               "Membership Classification",
+                                            expanded: "",
                                             required: ""
                                           },
                                           model: {
@@ -38003,13 +38008,16 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    { attrs: { label: "Programs" } },
+                                    {
+                                      attrs: { label: "Programs", expanded: "" }
+                                    },
                                     [
                                       _c(
                                         "b-select",
                                         {
                                           attrs: {
                                             placeholder: "Programs",
+                                            expanded: "",
                                             required: ""
                                           },
                                           model: {
