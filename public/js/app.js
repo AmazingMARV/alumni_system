@@ -2904,10 +2904,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['dataPrograms'],
   data: function data() {
@@ -39671,8 +39667,7 @@ var render = function() {
                                         attrs: {
                                           label:
                                             "Is your current job in line with your degree earned of program?",
-                                          expanded: "",
-                                          horizontal: ""
+                                          expanded: ""
                                         }
                                       },
                                       [
@@ -39724,13 +39719,19 @@ var render = function() {
                                   [
                                     _c(
                                       "b-field",
-                                      { attrs: { label: "Employment Type" } },
+                                      {
+                                        attrs: {
+                                          label: "Employment Type",
+                                          expanded: ""
+                                        }
+                                      },
                                       [
                                         _c(
                                           "b-select",
                                           {
                                             attrs: {
-                                              placeholder: "Employment Type"
+                                              placeholder: "Employment Type",
+                                              expanded: ""
                                             },
                                             model: {
                                               value: _vm.employ.employment_type,
@@ -39786,13 +39787,19 @@ var render = function() {
                                   [
                                     _c(
                                       "b-field",
-                                      { attrs: { label: "Occupational Type" } },
+                                      {
+                                        attrs: {
+                                          label: "Occupational Type",
+                                          expanded: ""
+                                        }
+                                      },
                                       [
                                         _c(
                                           "b-select",
                                           {
                                             attrs: {
-                                              placeholder: "Occupational Type"
+                                              placeholder: "Occupational Type",
+                                              expanded: ""
                                             },
                                             model: {
                                               value: _vm.employ.occupation_type,
