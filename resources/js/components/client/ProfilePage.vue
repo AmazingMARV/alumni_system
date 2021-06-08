@@ -460,7 +460,7 @@
 
                                         <div class="columns">
                                             <div class="column">
-                                                <b-field label="Is your current job in line with your degree earned of program?" expanded horizontal>
+                                                <b-field label="Is your current job in line with your degree earned of program?" expanded>
                                                     <b-select placeholder="In line to your current job?" v-model="employ.current_job">
                                                         <option value="1">Yes</option>
                                                         <option value="0">No</option>
@@ -470,8 +470,8 @@
                                         </div>
                                         <div class="columns">
                                             <div class="column">
-                                                <b-field label="Employment Type">
-                                                    <b-select placeholder="Employment Type" v-model="employ.employment_type">
+                                                <b-field label="Employment Type" expanded>
+                                                    <b-select placeholder="Employment Type" v-model="employ.employment_type" expanded>
                                                         <option value="Regular">Regular</option>
                                                         <option value="Contractual">Contractual</option>
                                                         <option value="Job Order">Part Time</option>
@@ -481,8 +481,8 @@
                                             </div> <!--Close Column-->
 
                                             <div class="column">
-                                                <b-field label="Occupational Type">
-                                                    <b-select placeholder="Occupational Type" v-model="employ.occupation_type">
+                                                <b-field label="Occupational Type" expanded>
+                                                    <b-select placeholder="Occupational Type" v-model="employ.occupation_type" expanded>
                                                         <option value="Government">Government</option>
                                                         <option value="Non-Government">Non-Government</option>
                                                         <option value="Religious Sector">Religious Sector</option>
@@ -559,8 +559,6 @@
                                             </b-select>
                                             </b-field>
                                             </div> <!--Close Column-->
-
-
                                         </div> <!--Close Columns-->
 
                                         <div class="columns">
@@ -582,14 +580,12 @@
                                         <div class="columns">
                                             <div class="column">
                                                 <b-field label="How would you rate the degree program you've earned in GADTC in terms of Note: FOR GADTC GRADUATES ONLY" >
-
-
-                                            <b-select placeholder="How would you rate the degree program you've earned in GADTC in terms of"  v-model="employ.degree_earned" >
-                                                <option value="4 - very highly">4 - very highly</option>
-                                                <option value="3 - highly">3 - highly</option>
-                                                <option value="2 - fairly">2 - fairly</option>
-                                                <option value="1 - poorly">1 - poorly</option>
-                                            </b-select>
+                                                <b-select placeholder="How would you rate the degree program you've earned in GADTC in terms of"  v-model="employ.degree_earned" >
+                                                    <option value="4 - very highly">4 - very highly</option>
+                                                    <option value="3 - highly">3 - highly</option>
+                                                    <option value="2 - fairly">2 - fairly</option>
+                                                    <option value="1 - poorly">1 - poorly</option>
+                                                </b-select>
                                             </b-field>
                                             </div> <!--Close Column-->
                                         </div> <!--Close Columns-->
