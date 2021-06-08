@@ -2895,6 +2895,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['dataPrograms'],
   data: function data() {
@@ -23519,7 +23531,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.educ-wrapper[data-v-44e566ff]{\n    padding:20px;\n    background-color: rgb(243, 243, 243);\n    border-radius: 5px;\n    margin-top: 5px;\n}\n.img-wrapper[data-v-44e566ff]{\n    height:100px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.educ-wrapper[data-v-44e566ff]{\n    padding:20px;\n    background-color: rgb(243, 243, 243);\n    border-radius: 5px;\n    margin-top: 5px;\n}\n.img-wrapper[data-v-44e566ff]{\n    height:100px;\n}\nh2[data-v-44e566ff] {\n    width: 100%;\n    text-align: center;\n    border-bottom: 1px solid #000;\n    line-height: 0.1em;\n    margin: 10px 0 20px;\n}\nh2 span[data-v-44e566ff] {\n    background:#fff;\n    padding:0 10px;\n}\n\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37519,649 +37531,1036 @@ var render = function() {
       _c("div", { staticClass: "section" }, [
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "columns" }, [
-            _c(
-              "div",
-              { staticClass: "column" },
-              [
-                _c(
-                  "b-tabs",
-                  {
-                    model: {
-                      value: _vm.activeTab,
-                      callback: function($$v) {
-                        _vm.activeTab = $$v
-                      },
-                      expression: "activeTab"
-                    }
-                  },
-                  [
-                    _c(
-                      "b-tab-item",
-                      { attrs: { label: "Personal Information" } },
-                      [
-                        _c(
-                          "form",
-                          {
-                            on: {
-                              submit: function($event) {
-                                $event.preventDefault()
-                                return _vm.submitInformation($event)
+            _c("div", { staticClass: "column is-8 is-offset-2" }, [
+              _c(
+                "div",
+                { staticClass: "box" },
+                [
+                  _c(
+                    "b-tabs",
+                    {
+                      model: {
+                        value: _vm.activeTab,
+                        callback: function($$v) {
+                          _vm.activeTab = $$v
+                        },
+                        expression: "activeTab"
+                      }
+                    },
+                    [
+                      _c(
+                        "b-tab-item",
+                        { attrs: { label: "Personal Information" } },
+                        [
+                          _c(
+                            "form",
+                            {
+                              on: {
+                                submit: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.submitInformation($event)
+                                }
                               }
-                            }
-                          },
-                          [
-                            _c("div", [
-                              _c("img", {
-                                staticClass: "img-wrapper",
-                                attrs: {
-                                  src: _vm.fields.profile_image,
-                                  alt: "..."
-                                },
-                                on: { click: _vm.openModal }
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "b-field",
-                              {
-                                staticClass: "file",
-                                class: { "has-name": !_vm.fields.image }
-                              },
-                              [
-                                _c(
-                                  "b-upload",
-                                  {
-                                    staticClass: "file-label",
-                                    model: {
-                                      value: _vm.fields.image,
-                                      callback: function($$v) {
-                                        _vm.$set(_vm.fields, "image", $$v)
+                            },
+                            [
+                              _c(
+                                "div",
+                                [
+                                  _c("div", [
+                                    _c("img", {
+                                      staticClass: "img-wrapper",
+                                      attrs: {
+                                        src: _vm.fields.profile_image,
+                                        alt: "..."
                                       },
-                                      expression: "fields.image"
-                                    }
-                                  },
+                                      on: { click: _vm.openModal }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "b-field",
+                                    {
+                                      staticClass: "file",
+                                      class: { "has-name": !_vm.fields.image }
+                                    },
+                                    [
+                                      _c(
+                                        "b-upload",
+                                        {
+                                          staticClass: "file-label",
+                                          model: {
+                                            value: _vm.fields.image,
+                                            callback: function($$v) {
+                                              _vm.$set(_vm.fields, "image", $$v)
+                                            },
+                                            expression: "fields.image"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            { staticClass: "file-cta" },
+                                            [
+                                              _c("b-icon", {
+                                                staticClass: "file-icon",
+                                                attrs: { icon: "upload" }
+                                              }),
+                                              _vm._v(" "),
+                                              _c(
+                                                "span",
+                                                { staticClass: "file-label" },
+                                                [_vm._v("Click to upload")]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _vm.fields.image
+                                            ? _c(
+                                                "span",
+                                                { staticClass: "file-name" },
+                                                [
+                                                  _vm._v(
+                                                    " " +
+                                                      _vm._s(
+                                                        _vm.fields.image.name
+                                                      ) +
+                                                      " "
+                                                  )
+                                                ]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
                                   [
                                     _c(
-                                      "span",
-                                      { staticClass: "file-cta" },
+                                      "b-field",
+                                      { attrs: { label: "First Name" } },
                                       [
-                                        _c("b-icon", {
-                                          staticClass: "file-icon",
-                                          attrs: { icon: "upload" }
-                                        }),
-                                        _vm._v(" "),
-                                        _c(
-                                          "span",
-                                          { staticClass: "file-label" },
-                                          [_vm._v("Click to upload")]
-                                        )
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "First Name",
+                                            required: ""
+                                          },
+                                          model: {
+                                            value: _vm.fields.fname,
+                                            callback: function($$v) {
+                                              _vm.$set(_vm.fields, "fname", $$v)
+                                            },
+                                            expression: "fields.fname"
+                                          }
+                                        })
                                       ],
                                       1
-                                    ),
-                                    _vm._v(" "),
-                                    _vm.fields.image
-                                      ? _c(
-                                          "span",
-                                          { staticClass: "file-name" },
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "Middle Name" } },
+                                      [
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Middle Name"
+                                          },
+                                          model: {
+                                            value: _vm.fields.mname,
+                                            callback: function($$v) {
+                                              _vm.$set(_vm.fields, "mname", $$v)
+                                            },
+                                            expression: "fields.mname"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "Last Name" } },
+                                      [
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Last Name",
+                                            required: ""
+                                          },
+                                          model: {
+                                            value: _vm.fields.lname,
+                                            callback: function($$v) {
+                                              _vm.$set(_vm.fields, "lname", $$v)
+                                            },
+                                            expression: "fields.lname"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "Suffix" } },
+                                      [
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Last Suffix"
+                                          },
+                                          model: {
+                                            value: _vm.fields.suffix,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.fields,
+                                                "suffix",
+                                                $$v
+                                              )
+                                            },
+                                            expression: "fields.suffix"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "Sex", expanded: "" } },
+                                      [
+                                        _c(
+                                          "b-select",
+                                          {
+                                            attrs: {
+                                              placeholder: "Sex",
+                                              expanded: "",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value: _vm.fields.sex,
+                                              callback: function($$v) {
+                                                _vm.$set(_vm.fields, "sex", $$v)
+                                              },
+                                              expression: "fields.sex"
+                                            }
+                                          },
                                           [
-                                            _vm._v(
-                                              " " +
-                                                _vm._s(_vm.fields.image.name) +
-                                                " "
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "MALE" } },
+                                              [_vm._v("MALE")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "FEMALE" } },
+                                              [_vm._v("FEMALE")]
                                             )
                                           ]
                                         )
-                                      : _vm._e()
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: {
+                                          label: "Civil Status",
+                                          expanded: ""
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "b-select",
+                                          {
+                                            attrs: {
+                                              placeholder: "Civil Status",
+                                              expanded: "",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value: _vm.fields.civil_status,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.fields,
+                                                  "civil_status",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "fields.civil_status"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "Single" } },
+                                              [_vm._v("Single")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "Married" } },
+                                              [_vm._v("Married")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "Separated" } },
+                                              [_vm._v("Separated")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "Widowed" } },
+                                              [_vm._v("Widowed")]
+                                            )
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("h2", [
+                                _c("span", [_vm._v("OTHER INFORMATION")])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: {
+                                          label: "Membership Classification",
+                                          expanded: ""
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "b-select",
+                                          {
+                                            attrs: {
+                                              placeholder:
+                                                "Membership Classification",
+                                              expanded: "",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value:
+                                                _vm.fields
+                                                  .alumni_classification,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.fields,
+                                                  "alumni_classification",
+                                                  $$v
+                                                )
+                                              },
+                                              expression:
+                                                "fields.alumni_classification"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "Associate" } },
+                                              [_vm._v("Associate")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "Honorary" } },
+                                              [_vm._v("Honorary")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "Regular" } },
+                                              [_vm._v("Regular")]
+                                            )
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "E-mail" } },
+                                      [
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "email",
+                                            placeholder: "E-mail"
+                                          },
+                                          model: {
+                                            value: _vm.fields.email,
+                                            callback: function($$v) {
+                                              _vm.$set(_vm.fields, "email", $$v)
+                                            },
+                                            expression: "fields.email"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: {
+                                          label: "Contact Number",
+                                          expanded: ""
+                                        }
+                                      },
+                                      [
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Contact Number"
+                                          },
+                                          model: {
+                                            value: _vm.fields.contact_number,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.fields,
+                                                "contact_number",
+                                                $$v
+                                              )
+                                            },
+                                            expression: "fields.contact_number"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "Facebook Account" } },
+                                      [
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Facebook Account"
+                                          },
+                                          model: {
+                                            value: _vm.fields.fb_account,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.fields,
+                                                "fb_account",
+                                                $$v
+                                              )
+                                            },
+                                            expression: "fields.fb_account"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: {
+                                          label: "Programs",
+                                          expanded: ""
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "b-select",
+                                          {
+                                            attrs: {
+                                              placeholder: "Programs",
+                                              expanded: "",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value: _vm.fields.program,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.fields,
+                                                  "program",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "fields.program"
+                                            }
+                                          },
+                                          _vm._l(_vm.programs, function(
+                                            program,
+                                            index
+                                          ) {
+                                            return _c(
+                                              "option",
+                                              {
+                                                key: index,
+                                                domProps: {
+                                                  value: program.program
+                                                }
+                                              },
+                                              [_vm._v(_vm._s(program.program))]
+                                            )
+                                          }),
+                                          0
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column is-8" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "School Name" } },
+                                      [
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "School Name",
+                                            required: ""
+                                          },
+                                          model: {
+                                            value: _vm.fields.ins_name,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.fields,
+                                                "ins_name",
+                                                $$v
+                                              )
+                                            },
+                                            expression: "fields.ins_name"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column is-4" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "Year Graduated" } },
+                                      [
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Year Graduated",
+                                            required: ""
+                                          },
+                                          model: {
+                                            value: _vm.fields.year_graduated,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.fields,
+                                                "year_graduated",
+                                                $$v
+                                              )
+                                            },
+                                            expression: "fields.year_graduated"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "buttons is-right" }, [
+                                _c(
+                                  "button",
+                                  { staticClass: "button is-primary" },
+                                  [
+                                    _c("i", { staticClass: "fa fa-user" }),
+                                    _vm._v("  SAVE")
                                   ]
                                 )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "columns" }, [
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    { attrs: { label: "First Name" } },
-                                    [
-                                      _c("b-input", {
-                                        attrs: {
-                                          type: "text",
-                                          placeholder: "First Name",
-                                          required: ""
-                                        },
-                                        model: {
-                                          value: _vm.fields.fname,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.fields, "fname", $$v)
-                                          },
-                                          expression: "fields.fname"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    { attrs: { label: "Middle Name" } },
-                                    [
-                                      _c("b-input", {
-                                        attrs: {
-                                          type: "text",
-                                          placeholder: "Middle Name"
-                                        },
-                                        model: {
-                                          value: _vm.fields.mname,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.fields, "mname", $$v)
-                                          },
-                                          expression: "fields.mname"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    { attrs: { label: "Last Name" } },
-                                    [
-                                      _c("b-input", {
-                                        attrs: {
-                                          type: "text",
-                                          placeholder: "Last Name",
-                                          required: ""
-                                        },
-                                        model: {
-                                          value: _vm.fields.lname,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.fields, "lname", $$v)
-                                          },
-                                          expression: "fields.lname"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    { attrs: { label: "Suffix" } },
-                                    [
-                                      _c("b-input", {
-                                        attrs: {
-                                          type: "text",
-                                          placeholder: "Last Suffix"
-                                        },
-                                        model: {
-                                          value: _vm.fields.suffix,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.fields, "suffix", $$v)
-                                          },
-                                          expression: "fields.suffix"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "columns" }, [
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    { attrs: { label: "Sex", expanded: "" } },
-                                    [
-                                      _c(
-                                        "b-select",
+                              ])
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-tab-item",
+                        { attrs: { label: "Educational Advancement" } },
+                        [
+                          _c("i", [
+                            _vm._v(
+                              "(Masteral, Doctoral Programs and other units earned after your graduation in college)"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "form",
+                            {
+                              on: {
+                                submit: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.submitEducation($event)
+                                }
+                              }
+                            },
+                            [
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column is-10 is-offset-1" },
+                                  [
+                                    _vm._l(this.educations, function(
+                                      educ,
+                                      index
+                                    ) {
+                                      return _c(
+                                        "div",
                                         {
-                                          attrs: {
-                                            placeholder: "Sex",
-                                            expanded: "",
-                                            required: ""
-                                          },
-                                          model: {
-                                            value: _vm.fields.sex,
-                                            callback: function($$v) {
-                                              _vm.$set(_vm.fields, "sex", $$v)
-                                            },
-                                            expression: "fields.sex"
-                                          }
+                                          key: index,
+                                          staticClass: "educ-wrapper"
                                         },
                                         [
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "MALE" } },
-                                            [_vm._v("MALE")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "FEMALE" } },
-                                            [_vm._v("FEMALE")]
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    {
-                                      attrs: {
-                                        label: "Civil Status",
-                                        expanded: ""
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "b-select",
-                                        {
-                                          attrs: {
-                                            placeholder: "Civil Status",
-                                            expanded: "",
-                                            required: ""
-                                          },
-                                          model: {
-                                            value: _vm.fields.civil_status,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.fields,
-                                                "civil_status",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "fields.civil_status"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Single" } },
-                                            [_vm._v("Single")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Married" } },
-                                            [_vm._v("Married")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Separated" } },
-                                            [_vm._v("Separated")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Widowed" } },
-                                            [_vm._v("Widowed")]
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    {
-                                      attrs: {
-                                        label: "Membership Classification",
-                                        expanded: ""
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "b-select",
-                                        {
-                                          attrs: {
-                                            placeholder:
-                                              "Membership Classification",
-                                            expanded: "",
-                                            required: ""
-                                          },
-                                          model: {
-                                            value:
-                                              _vm.fields.alumni_classification,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.fields,
-                                                "alumni_classification",
-                                                $$v
-                                              )
-                                            },
-                                            expression:
-                                              "fields.alumni_classification"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Associate" } },
-                                            [_vm._v("Associate")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Honorary" } },
-                                            [_vm._v("Honorary")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Regular" } },
-                                            [_vm._v("Regular")]
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    { attrs: { label: "E-mail" } },
-                                    [
-                                      _c("b-input", {
-                                        attrs: {
-                                          type: "email",
-                                          placeholder: "E-mail"
-                                        },
-                                        model: {
-                                          value: _vm.fields.email,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.fields, "email", $$v)
-                                          },
-                                          expression: "fields.email"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    { attrs: { label: "Facebook Account" } },
-                                    [
-                                      _c("b-input", {
-                                        attrs: {
-                                          type: "text",
-                                          placeholder: "Facebook Account"
-                                        },
-                                        model: {
-                                          value: _vm.fields.fb_account,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.fields,
-                                              "fb_account",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "fields.fb_account"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "columns" }, [
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    {
-                                      attrs: {
-                                        label: "Contact Number",
-                                        expanded: ""
-                                      }
-                                    },
-                                    [
-                                      _c("b-input", {
-                                        attrs: {
-                                          type: "text",
-                                          placeholder: "Contact Number"
-                                        },
-                                        model: {
-                                          value: _vm.fields.contact_number,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.fields,
-                                              "contact_number",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "fields.contact_number"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    {
-                                      attrs: { label: "Programs", expanded: "" }
-                                    },
-                                    [
-                                      _c(
-                                        "b-select",
-                                        {
-                                          attrs: {
-                                            placeholder: "Programs",
-                                            expanded: "",
-                                            required: ""
-                                          },
-                                          model: {
-                                            value: _vm.fields.program,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.fields,
-                                                "program",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "fields.program"
-                                          }
-                                        },
-                                        _vm._l(_vm.programs, function(
-                                          program,
-                                          index
-                                        ) {
-                                          return _c(
-                                            "option",
-                                            {
-                                              key: index,
-                                              domProps: {
-                                                value: program.program
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value: educ.education_id,
+                                                expression: "educ.education_id"
                                               }
+                                            ],
+                                            attrs: { type: "hidden" },
+                                            domProps: {
+                                              value: educ.education_id
                                             },
-                                            [_vm._v(_vm._s(program.program))]
+                                            on: {
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+                                                _vm.$set(
+                                                  educ,
+                                                  "education_id",
+                                                  $event.target.value
+                                                )
+                                              }
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "columns" },
+                                            [
+                                              _c(
+                                                "div",
+                                                { staticClass: "column" },
+                                                [
+                                                  _c(
+                                                    "b-field",
+                                                    {
+                                                      attrs: { label: "Level" }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "b-select",
+                                                        {
+                                                          attrs: {
+                                                            placeholder: "Level"
+                                                          },
+                                                          model: {
+                                                            value: educ.level,
+                                                            callback: function(
+                                                              $$v
+                                                            ) {
+                                                              _vm.$set(
+                                                                educ,
+                                                                "level",
+                                                                $$v
+                                                              )
+                                                            },
+                                                            expression:
+                                                              "educ.level"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "option",
+                                                            {
+                                                              attrs: {
+                                                                value:
+                                                                  "TERTIARY"
+                                                              }
+                                                            },
+                                                            [_vm._v("TERTIARY")]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "option",
+                                                            {
+                                                              attrs: {
+                                                                value:
+                                                                  "POST GRADUATE"
+                                                              }
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "POST GRADUATE"
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "option",
+                                                            {
+                                                              attrs: {
+                                                                value:
+                                                                  "VOCATIONAL"
+                                                              }
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "VOCATIONAL"
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "columns" },
+                                            [
+                                              _c(
+                                                "div",
+                                                { staticClass: "column" },
+                                                [
+                                                  _c(
+                                                    "b-field",
+                                                    {
+                                                      attrs: {
+                                                        label: "Name of School"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("b-input", {
+                                                        attrs: {
+                                                          placeholder:
+                                                            "Name of School"
+                                                        },
+                                                        model: {
+                                                          value:
+                                                            educ.school_name,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              educ,
+                                                              "school_name",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "educ.school_name"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "column" },
+                                                [
+                                                  _c(
+                                                    "b-field",
+                                                    {
+                                                      attrs: { label: "Remark" }
+                                                    },
+                                                    [
+                                                      _c("b-input", {
+                                                        attrs: {
+                                                          placeholder: "Remark"
+                                                        },
+                                                        model: {
+                                                          value: educ.remark,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              educ,
+                                                              "remark",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "educ.remark"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "columns" },
+                                            [
+                                              _c(
+                                                "div",
+                                                { staticClass: "column" },
+                                                [
+                                                  _c(
+                                                    "b-field",
+                                                    {
+                                                      attrs: { label: "Units" }
+                                                    },
+                                                    [
+                                                      _c("b-numberinput", {
+                                                        attrs: {
+                                                          placeholder: "Units"
+                                                        },
+                                                        model: {
+                                                          value: educ.unit,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              educ,
+                                                              "unit",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "educ.unit"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "column" },
+                                                [
+                                                  _c(
+                                                    "b-field",
+                                                    {
+                                                      attrs: {
+                                                        label: "Year Graduated"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("b-input", {
+                                                        attrs: {
+                                                          placeholder:
+                                                            "Year Graduated"
+                                                        },
+                                                        model: {
+                                                          value:
+                                                            educ.year_graduated,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              educ,
+                                                              "year_graduated",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "educ.year_graduated"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "buttons mt-3" },
+                                            [
+                                              _c(
+                                                "button",
+                                                {
+                                                  staticClass:
+                                                    "button is-small is-danger is-outlined",
+                                                  on: {
+                                                    click: function($event) {
+                                                      return _vm.remove(index)
+                                                    }
+                                                  }
+                                                },
+                                                [_vm._v("REMOVE")]
+                                              )
+                                            ]
                                           )
-                                        }),
-                                        0
+                                        ]
                                       )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    { attrs: { label: "School Name" } },
-                                    [
-                                      _c("b-input", {
-                                        attrs: {
-                                          type: "text",
-                                          placeholder: "School Name",
-                                          required: ""
-                                        },
-                                        model: {
-                                          value: _vm.fields.ins_name,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.fields,
-                                              "ins_name",
-                                              $$v
-                                            )
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "buttons mt-3" },
+                                      [
+                                        _c(
+                                          "b-button",
+                                          {
+                                            staticClass:
+                                              "button is-small is-success is-outlined",
+                                            on: { click: _vm.add }
                                           },
-                                          expression: "fields.ins_name"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
+                                          [_vm._v("ADD")]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  2
+                                )
+                              ]),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    { attrs: { label: "Year Graduated" } },
-                                    [
-                                      _c("b-input", {
-                                        attrs: {
-                                          type: "text",
-                                          placeholder: "Year Graduated",
-                                          required: ""
-                                        },
-                                        model: {
-                                          value: _vm.fields.year_graduated,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.fields,
-                                              "year_graduated",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "fields.year_graduated"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "buttons is-right" }, [
-                              _c(
-                                "button",
-                                { staticClass: "button is-primary" },
-                                [
+                              _c("div", { staticClass: "buttons is-right" }, [
+                                _c("button", { staticClass: "button" }, [
                                   _c("i", { staticClass: "fa fa-user" }),
                                   _vm._v("  SAVE")
-                                ]
-                              )
-                            ])
-                          ],
-                          1
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "b-tab-item",
-                      { attrs: { label: "Educational Advancement" } },
-                      [
-                        _c("i", [
-                          _vm._v(
-                            "(Masteral, Doctoral Programs and other units earned after your graduation in college)"
+                                ])
+                              ])
+                            ]
                           )
-                        ]),
-                        _vm._v(" "),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("b-tab-item", { attrs: { label: "Eligibility" } }, [
                         _c(
                           "form",
                           {
                             on: {
                               submit: function($event) {
                                 $event.preventDefault()
-                                return _vm.submitEducation($event)
+                                return _vm.submitEligibility($event)
                               }
                             }
                           },
@@ -38171,8 +38570,8 @@ var render = function() {
                                 "div",
                                 { staticClass: "column is-10 is-offset-1" },
                                 [
-                                  _vm._l(this.educations, function(
-                                    educ,
+                                  _vm._l(this.eligibilities, function(
+                                    eligible,
                                     index
                                   ) {
                                     return _c(
@@ -38187,13 +38586,14 @@ var render = function() {
                                             {
                                               name: "model",
                                               rawName: "v-model",
-                                              value: educ.education_id,
-                                              expression: "educ.education_id"
+                                              value: eligible.eligibility_id,
+                                              expression:
+                                                "eligible.eligibility_id"
                                             }
                                           ],
                                           attrs: { type: "hidden" },
                                           domProps: {
-                                            value: educ.education_id
+                                            value: eligible.eligibility_id
                                           },
                                           on: {
                                             input: function($event) {
@@ -38201,8 +38601,8 @@ var render = function() {
                                                 return
                                               }
                                               _vm.$set(
-                                                educ,
-                                                "education_id",
+                                                eligible,
+                                                "eligibility_id",
                                                 $event.target.value
                                               )
                                             }
@@ -38216,166 +38616,27 @@ var render = function() {
                                             [
                                               _c(
                                                 "b-field",
-                                                { attrs: { label: "Level" } },
-                                                [
-                                                  _c(
-                                                    "b-select",
-                                                    {
-                                                      attrs: {
-                                                        placeholder: "Level"
-                                                      },
-                                                      model: {
-                                                        value: educ.level,
-                                                        callback: function(
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            educ,
-                                                            "level",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression: "educ.level"
-                                                      }
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "option",
-                                                        {
-                                                          attrs: {
-                                                            value: "TERTIARY"
-                                                          }
-                                                        },
-                                                        [_vm._v("TERTIARY")]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "option",
-                                                        {
-                                                          attrs: {
-                                                            value:
-                                                              "POST GRADUATE"
-                                                          }
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "POST GRADUATE"
-                                                          )
-                                                        ]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "option",
-                                                        {
-                                                          attrs: {
-                                                            value: "VOCATIONAL"
-                                                          }
-                                                        },
-                                                        [_vm._v("VOCATIONAL")]
-                                                      )
-                                                    ]
-                                                  )
-                                                ],
-                                                1
-                                              )
-                                            ],
-                                            1
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "columns" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "column" },
-                                            [
-                                              _c(
-                                                "b-field",
                                                 {
                                                   attrs: {
-                                                    label: "Name of School"
+                                                    label: "Eligibility"
                                                   }
                                                 },
                                                 [
                                                   _c("b-input", {
                                                     attrs: {
-                                                      placeholder:
-                                                        "Name of School"
+                                                      placeholder: "Eligibility"
                                                     },
                                                     model: {
-                                                      value: educ.school_name,
+                                                      value: eligible.eligible,
                                                       callback: function($$v) {
                                                         _vm.$set(
-                                                          educ,
-                                                          "school_name",
+                                                          eligible,
+                                                          "eligible",
                                                           $$v
                                                         )
                                                       },
                                                       expression:
-                                                        "educ.school_name"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              )
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "column" },
-                                            [
-                                              _c(
-                                                "b-field",
-                                                { attrs: { label: "Remark" } },
-                                                [
-                                                  _c("b-input", {
-                                                    attrs: {
-                                                      placeholder: "Remark"
-                                                    },
-                                                    model: {
-                                                      value: educ.remark,
-                                                      callback: function($$v) {
-                                                        _vm.$set(
-                                                          educ,
-                                                          "remark",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression: "educ.remark"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              )
-                                            ],
-                                            1
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "columns" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "column" },
-                                            [
-                                              _c(
-                                                "b-field",
-                                                { attrs: { label: "Units" } },
-                                                [
-                                                  _c("b-numberinput", {
-                                                    attrs: {
-                                                      placeholder: "Units"
-                                                    },
-                                                    model: {
-                                                      value: educ.unit,
-                                                      callback: function($$v) {
-                                                        _vm.$set(
-                                                          educ,
-                                                          "unit",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression: "educ.unit"
+                                                        "eligible.eligible"
                                                     }
                                                   })
                                                 ],
@@ -38393,27 +38654,98 @@ var render = function() {
                                                 "b-field",
                                                 {
                                                   attrs: {
-                                                    label: "Year Graduated"
+                                                    label:
+                                                      "Eligible Since (Year)"
                                                   }
                                                 },
                                                 [
                                                   _c("b-input", {
                                                     attrs: {
                                                       placeholder:
-                                                        "Year Graduated"
+                                                        "Eligible Since (Year)"
                                                     },
                                                     model: {
                                                       value:
-                                                        educ.year_graduated,
+                                                        eligible.date_acquired,
                                                       callback: function($$v) {
                                                         _vm.$set(
-                                                          educ,
-                                                          "year_graduated",
+                                                          eligible,
+                                                          "date_acquired",
                                                           $$v
                                                         )
                                                       },
                                                       expression:
-                                                        "educ.year_graduated"
+                                                        "eligible.date_acquired"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "column" },
+                                            [
+                                              _c(
+                                                "b-field",
+                                                { attrs: { label: "Rating" } },
+                                                [
+                                                  _c("b-input", {
+                                                    attrs: {
+                                                      placeholder: "Rating"
+                                                    },
+                                                    model: {
+                                                      value: eligible.rating,
+                                                      callback: function($$v) {
+                                                        _vm.$set(
+                                                          eligible,
+                                                          "rating",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression:
+                                                        "eligible.rating"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "column" },
+                                            [
+                                              _c(
+                                                "b-field",
+                                                {
+                                                  attrs: {
+                                                    label: "License Number"
+                                                  }
+                                                },
+                                                [
+                                                  _c("b-input", {
+                                                    attrs: {
+                                                      placeholder:
+                                                        "License Number"
+                                                    },
+                                                    model: {
+                                                      value:
+                                                        eligible.license_id,
+                                                      callback: function($$v) {
+                                                        _vm.$set(
+                                                          eligible,
+                                                          "license_id",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression:
+                                                        "eligible.license_id"
                                                     }
                                                   })
                                                 ],
@@ -38435,7 +38767,9 @@ var render = function() {
                                                   "button is-small is-danger is-outlined",
                                                 on: {
                                                   click: function($event) {
-                                                    return _vm.remove(index)
+                                                    return _vm.removeEligible(
+                                                      index
+                                                    )
                                                   }
                                                 }
                                               },
@@ -38456,7 +38790,7 @@ var render = function() {
                                         {
                                           staticClass:
                                             "button is-small is-success is-outlined",
-                                          on: { click: _vm.add }
+                                          on: { click: _vm.addEligible }
                                         },
                                         [_vm._v("ADD")]
                                       )
@@ -38476,914 +38810,49 @@ var render = function() {
                             ])
                           ]
                         )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("b-tab-item", { attrs: { label: "Eligibility" } }, [
-                      _c(
-                        "form",
-                        {
-                          on: {
-                            submit: function($event) {
-                              $event.preventDefault()
-                              return _vm.submitEligibility($event)
-                            }
-                          }
-                        },
-                        [
-                          _c("div", { staticClass: "columns" }, [
-                            _c(
-                              "div",
-                              { staticClass: "column is-10 is-offset-1" },
-                              [
-                                _vm._l(this.eligibilities, function(
-                                  eligible,
-                                  index
-                                ) {
-                                  return _c(
-                                    "div",
-                                    { key: index, staticClass: "educ-wrapper" },
-                                    [
-                                      _c("input", {
-                                        directives: [
-                                          {
-                                            name: "model",
-                                            rawName: "v-model",
-                                            value: eligible.eligibility_id,
-                                            expression:
-                                              "eligible.eligibility_id"
-                                          }
-                                        ],
-                                        attrs: { type: "hidden" },
-                                        domProps: {
-                                          value: eligible.eligibility_id
-                                        },
-                                        on: {
-                                          input: function($event) {
-                                            if ($event.target.composing) {
-                                              return
-                                            }
-                                            _vm.$set(
-                                              eligible,
-                                              "eligibility_id",
-                                              $event.target.value
-                                            )
-                                          }
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "columns" }, [
-                                        _c(
-                                          "div",
-                                          { staticClass: "column" },
-                                          [
-                                            _c(
-                                              "b-field",
-                                              {
-                                                attrs: { label: "Eligibility" }
-                                              },
-                                              [
-                                                _c("b-input", {
-                                                  attrs: {
-                                                    placeholder: "Eligibility"
-                                                  },
-                                                  model: {
-                                                    value: eligible.eligible,
-                                                    callback: function($$v) {
-                                                      _vm.$set(
-                                                        eligible,
-                                                        "eligible",
-                                                        $$v
-                                                      )
-                                                    },
-                                                    expression:
-                                                      "eligible.eligible"
-                                                  }
-                                                })
-                                              ],
-                                              1
-                                            )
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "column" },
-                                          [
-                                            _c(
-                                              "b-field",
-                                              {
-                                                attrs: {
-                                                  label: "Eligible Since (Year)"
-                                                }
-                                              },
-                                              [
-                                                _c("b-input", {
-                                                  attrs: {
-                                                    placeholder:
-                                                      "Eligible Since (Year)"
-                                                  },
-                                                  model: {
-                                                    value:
-                                                      eligible.date_acquired,
-                                                    callback: function($$v) {
-                                                      _vm.$set(
-                                                        eligible,
-                                                        "date_acquired",
-                                                        $$v
-                                                      )
-                                                    },
-                                                    expression:
-                                                      "eligible.date_acquired"
-                                                  }
-                                                })
-                                              ],
-                                              1
-                                            )
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "column" },
-                                          [
-                                            _c(
-                                              "b-field",
-                                              { attrs: { label: "Rating" } },
-                                              [
-                                                _c("b-input", {
-                                                  attrs: {
-                                                    placeholder: "Rating"
-                                                  },
-                                                  model: {
-                                                    value: eligible.rating,
-                                                    callback: function($$v) {
-                                                      _vm.$set(
-                                                        eligible,
-                                                        "rating",
-                                                        $$v
-                                                      )
-                                                    },
-                                                    expression:
-                                                      "eligible.rating"
-                                                  }
-                                                })
-                                              ],
-                                              1
-                                            )
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "column" },
-                                          [
-                                            _c(
-                                              "b-field",
-                                              {
-                                                attrs: {
-                                                  label: "License Number"
-                                                }
-                                              },
-                                              [
-                                                _c("b-input", {
-                                                  attrs: {
-                                                    placeholder:
-                                                      "License Number"
-                                                  },
-                                                  model: {
-                                                    value: eligible.license_id,
-                                                    callback: function($$v) {
-                                                      _vm.$set(
-                                                        eligible,
-                                                        "license_id",
-                                                        $$v
-                                                      )
-                                                    },
-                                                    expression:
-                                                      "eligible.license_id"
-                                                  }
-                                                })
-                                              ],
-                                              1
-                                            )
-                                          ],
-                                          1
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "buttons mt-3" },
-                                        [
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "button is-small is-danger is-outlined",
-                                              on: {
-                                                click: function($event) {
-                                                  return _vm.removeEligible(
-                                                    index
-                                                  )
-                                                }
-                                              }
-                                            },
-                                            [_vm._v("REMOVE")]
-                                          )
-                                        ]
-                                      )
-                                    ]
-                                  )
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "buttons mt-3" },
-                                  [
-                                    _c(
-                                      "b-button",
-                                      {
-                                        staticClass:
-                                          "button is-small is-success is-outlined",
-                                        on: { click: _vm.addEligible }
-                                      },
-                                      [_vm._v("ADD")]
-                                    )
-                                  ],
-                                  1
-                                )
-                              ],
-                              2
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "buttons is-right" }, [
-                            _c("button", { staticClass: "button" }, [
-                              _c("i", { staticClass: "fa fa-user" }),
-                              _vm._v("  SAVE")
-                            ])
-                          ])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("b-tab-item", { attrs: { label: "Addresses" } }, [
-                      _c(
-                        "form",
-                        {
-                          on: {
-                            submit: function($event) {
-                              $event.preventDefault()
-                              return _vm.submitAddress($event)
-                            }
-                          }
-                        },
-                        [
-                          _c("div", { staticClass: "title is-5" }, [
-                            _vm._v("Home Address")
-                          ]),
-                          _vm._v(" "),
-                          _c("i", [
-                            _vm._v(
-                              "(Refers to Address of Origin, especially during your college days)"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.nAddresses.address_id,
-                                expression: "nAddresses.address_id"
-                              }
-                            ],
-                            attrs: { type: "hidden" },
-                            domProps: { value: _vm.nAddresses.address_id },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.nAddresses,
-                                  "address_id",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "columns" }, [
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "Country" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "Country" },
-                                      model: {
-                                        value: _vm.nAddresses.country_boarding,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "country_boarding",
-                                            $$v
-                                          )
-                                        },
-                                        expression:
-                                          "nAddresses.country_boarding"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "Province" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "Province" },
-                                      model: {
-                                        value: _vm.nAddresses.province_boarding,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "province_boarding",
-                                            $$v
-                                          )
-                                        },
-                                        expression:
-                                          "nAddresses.province_boarding"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "columns" }, [
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "City/Municipality" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: {
-                                        placeholder: "City/Municipality"
-                                      },
-                                      model: {
-                                        value: _vm.nAddresses.city_boarding,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "city_boarding",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.city_boarding"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "District" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "District" },
-                                      model: {
-                                        value: _vm.nAddresses.district_boarding,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "district_boarding",
-                                            $$v
-                                          )
-                                        },
-                                        expression:
-                                          "nAddresses.district_boarding"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "columns" }, [
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "Brgy/Street" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "Brgy/Street" },
-                                      model: {
-                                        value: _vm.nAddresses.brgy_boarding,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "brgy_boarding",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.brgy_boarding"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "Zipcode" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "Zipcode" },
-                                      model: {
-                                        value: _vm.nAddresses.zipcode_boarding,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "zipcode_boarding",
-                                            $$v
-                                          )
-                                        },
-                                        expression:
-                                          "nAddresses.zipcode_boarding"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("hr"),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "title is-5" }, [
-                            _vm._v("Work Address")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "columns" }, [
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "Country" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "Country" },
-                                      model: {
-                                        value: _vm.nAddresses.country_work,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "country_work",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.country_work"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "Province" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "Province" },
-                                      model: {
-                                        value: _vm.nAddresses.province_work,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "province_work",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.province_work"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "columns" }, [
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "City/Municipality" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: {
-                                        placeholder: "City/Municipality"
-                                      },
-                                      model: {
-                                        value: _vm.nAddresses.city_work,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "city_work",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.city_work"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "District" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "District" },
-                                      model: {
-                                        value: _vm.nAddresses.district_work,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "district_work",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.district_work"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "columns" }, [
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "Brgy/Street" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "Brgy/Street" },
-                                      model: {
-                                        value: _vm.nAddresses.brgy_work,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "brgy_work",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.brgy_work"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "Zipcode" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "Zipcode" },
-                                      model: {
-                                        value: _vm.nAddresses.zipcode_work,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "zipcode_work",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.zipcode_work"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("hr"),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "title is-5" }, [
-                            _vm._v("Present Address")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "columns" }, [
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "Country" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "Country" },
-                                      model: {
-                                        value: _vm.nAddresses.country_perm,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "country_perm",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.country_perm"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "Province" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "Province" },
-                                      model: {
-                                        value: _vm.nAddresses.province_perm,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "province_perm",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.province_perm"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "columns" }, [
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "City/Municipality" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: {
-                                        placeholder: "City/Municipality"
-                                      },
-                                      model: {
-                                        value: _vm.nAddresses.city_perm,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "city_perm",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.city_perm"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "District" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "District" },
-                                      model: {
-                                        value: _vm.nAddresses.district_perm,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "district_perm",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.district_perm"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "columns" }, [
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "Brgy/Street" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "Brgy/Street" },
-                                      model: {
-                                        value: _vm.nAddresses.brgy_perm,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "brgy_perm",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.brgy_perm"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "column" },
-                              [
-                                _c(
-                                  "b-field",
-                                  { attrs: { label: "Zipcode" } },
-                                  [
-                                    _c("b-input", {
-                                      attrs: { placeholder: "Zipcode" },
-                                      model: {
-                                        value: _vm.nAddresses.zipcode_perm,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.nAddresses,
-                                            "zipcode_perm",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "nAddresses.zipcode_perm"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "buttons is-right" }, [
-                            _c("button", { staticClass: "button is-primary" }, [
-                              _c("i", { staticClass: "fa fa-user" }),
-                              _vm._v("  SAVE")
-                            ])
-                          ])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "b-tab-item",
-                      { attrs: { label: "Employment Information" } },
-                      [
+                      ]),
+                      _vm._v(" "),
+                      _c("b-tab-item", { attrs: { label: "Addresses" } }, [
                         _c(
                           "form",
                           {
                             on: {
                               submit: function($event) {
                                 $event.preventDefault()
-                                return _vm.submitEmployment($event)
+                                return _vm.submitAddress($event)
                               }
                             }
                           },
                           [
+                            _c("div", { staticClass: "title is-5" }, [
+                              _vm._v("Home Address")
+                            ]),
+                            _vm._v(" "),
+                            _c("i", [
+                              _vm._v(
+                                "(Refers to Address of Origin, especially during your college days)"
+                              )
+                            ]),
+                            _vm._v(" "),
                             _c("input", {
                               directives: [
                                 {
                                   name: "model",
                                   rawName: "v-model",
-                                  value: _vm.employ.employment_id,
-                                  expression: "employ.employment_id"
+                                  value: _vm.nAddresses.address_id,
+                                  expression: "nAddresses.address_id"
                                 }
                               ],
                               attrs: { type: "hidden" },
-                              domProps: { value: _vm.employ.employment_id },
+                              domProps: { value: _vm.nAddresses.address_id },
                               on: {
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
                                   }
                                   _vm.$set(
-                                    _vm.employ,
-                                    "employment_id",
+                                    _vm.nAddresses,
+                                    "address_id",
                                     $event.target.value
                                   )
                                 }
@@ -39397,79 +38866,22 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    { attrs: { label: "Are you employed?" } },
-                                    [
-                                      _c(
-                                        "b-radio",
-                                        {
-                                          attrs: { "native-value": "1" },
-                                          model: {
-                                            value: _vm.employ.is_employed,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "is_employed",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.is_employed"
-                                          }
-                                        },
-                                        [_vm._v("Yes")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "b-radio",
-                                        {
-                                          attrs: { "native-value": "0" },
-                                          model: {
-                                            value: _vm.employ.is_employed,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "is_employed",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.is_employed"
-                                          }
-                                        },
-                                        [_vm._v("No")]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "columns" }, [
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    {
-                                      attrs: { label: "Name of Organization" }
-                                    },
+                                    { attrs: { label: "Country" } },
                                     [
                                       _c("b-input", {
-                                        attrs: {
-                                          type: "text",
-                                          placeholder: "Name of Organization"
-                                        },
+                                        attrs: { placeholder: "Country" },
                                         model: {
-                                          value: _vm.employ.organization,
+                                          value:
+                                            _vm.nAddresses.country_boarding,
                                           callback: function($$v) {
                                             _vm.$set(
-                                              _vm.employ,
-                                              "organization",
+                                              _vm.nAddresses,
+                                              "country_boarding",
                                               $$v
                                             )
                                           },
-                                          expression: "employ.organization"
+                                          expression:
+                                            "nAddresses.country_boarding"
                                         }
                                       })
                                     ],
@@ -39485,71 +38897,22 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    {
-                                      attrs: { label: "Designation/Position" }
-                                    },
+                                    { attrs: { label: "Province" } },
                                     [
                                       _c("b-input", {
-                                        attrs: {
-                                          type: "text",
-                                          placeholder: "Designation"
-                                        },
+                                        attrs: { placeholder: "Province" },
                                         model: {
-                                          value: _vm.employ.designation,
+                                          value:
+                                            _vm.nAddresses.province_boarding,
                                           callback: function($$v) {
                                             _vm.$set(
-                                              _vm.employ,
-                                              "designation",
+                                              _vm.nAddresses,
+                                              "province_boarding",
                                               $$v
                                             )
                                           },
-                                          expression: "employ.designation"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "column" },
-                                [
-                                  _c(
-                                    "b-field",
-                                    { attrs: { label: "From/To" } },
-                                    [
-                                      _c("b-input", {
-                                        attrs: {
-                                          type: "text",
-                                          placeholder: "Year From"
-                                        },
-                                        model: {
-                                          value: _vm.employ.year_from,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.employ,
-                                              "year_from",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "employ.year_from"
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c("b-input", {
-                                        attrs: {
-                                          type: "text",
-                                          placeholder: "Year To"
-                                        },
-                                        model: {
-                                          value: _vm.employ.year_to,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.employ, "year_to", $$v)
-                                          },
-                                          expression: "employ.year_to"
+                                          expression:
+                                            "nAddresses.province_boarding"
                                         }
                                       })
                                     ],
@@ -39567,46 +38930,24 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    {
-                                      attrs: {
-                                        label:
-                                          "Is to your current job in line with your degree earned of program?"
-                                      }
-                                    },
+                                    { attrs: { label: "City/Municipality" } },
                                     [
-                                      _c(
-                                        "b-select",
-                                        {
-                                          attrs: {
-                                            placeholder:
-                                              "In line to your current job?"
-                                          },
-                                          model: {
-                                            value: _vm.employ.current_job,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "current_job",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.current_job"
-                                          }
+                                      _c("b-input", {
+                                        attrs: {
+                                          placeholder: "City/Municipality"
                                         },
-                                        [
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "1" } },
-                                            [_vm._v("Yes")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "0" } },
-                                            [_vm._v("No")]
-                                          )
-                                        ]
-                                      )
+                                        model: {
+                                          value: _vm.nAddresses.city_boarding,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "city_boarding",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "nAddresses.city_boarding"
+                                        }
+                                      })
                                     ],
                                     1
                                   )
@@ -39620,52 +38961,55 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    { attrs: { label: "Employment Type" } },
+                                    { attrs: { label: "District" } },
                                     [
-                                      _c(
-                                        "b-select",
-                                        {
-                                          attrs: {
-                                            placeholder: "Employment Type"
+                                      _c("b-input", {
+                                        attrs: { placeholder: "District" },
+                                        model: {
+                                          value:
+                                            _vm.nAddresses.district_boarding,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "district_boarding",
+                                              $$v
+                                            )
                                           },
-                                          model: {
-                                            value: _vm.employ.employment_type,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "employment_type",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.employment_type"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Regular" } },
-                                            [_vm._v("Regular")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Contractual" } },
-                                            [_vm._v("Contractual")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Job Order" } },
-                                            [_vm._v("Part Time")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Casual" } },
-                                            [_vm._v("Casual")]
-                                          )
-                                        ]
-                                      )
+                                          expression:
+                                            "nAddresses.district_boarding"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "columns" }, [
+                              _c(
+                                "div",
+                                { staticClass: "column" },
+                                [
+                                  _c(
+                                    "b-field",
+                                    { attrs: { label: "Brgy/Street" } },
+                                    [
+                                      _c("b-input", {
+                                        attrs: { placeholder: "Brgy/Street" },
+                                        model: {
+                                          value: _vm.nAddresses.brgy_boarding,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "brgy_boarding",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "nAddresses.brgy_boarding"
+                                        }
+                                      })
                                     ],
                                     1
                                   )
@@ -39679,58 +39023,36 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    { attrs: { label: "Occupational Type" } },
+                                    { attrs: { label: "Zipcode" } },
                                     [
-                                      _c(
-                                        "b-select",
-                                        {
-                                          attrs: {
-                                            placeholder: "Occupational Type"
+                                      _c("b-input", {
+                                        attrs: { placeholder: "Zipcode" },
+                                        model: {
+                                          value:
+                                            _vm.nAddresses.zipcode_boarding,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "zipcode_boarding",
+                                              $$v
+                                            )
                                           },
-                                          model: {
-                                            value: _vm.employ.occupation_type,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "occupation_type",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.occupation_type"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Government" } },
-                                            [_vm._v("Government")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: { value: "Non-Government" }
-                                            },
-                                            [_vm._v("Non-Government")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value: "Religious Sector"
-                                              }
-                                            },
-                                            [_vm._v("Religious Sector")]
-                                          )
-                                        ]
-                                      )
+                                          expression:
+                                            "nAddresses.zipcode_boarding"
+                                        }
+                                      })
                                     ],
                                     1
                                   )
                                 ],
                                 1
                               )
+                            ]),
+                            _vm._v(" "),
+                            _c("hr"),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "title is-5" }, [
+                              _vm._v("Work Address")
                             ]),
                             _vm._v(" "),
                             _c("div", { staticClass: "columns" }, [
@@ -39740,49 +39062,22 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    {
-                                      attrs: {
-                                        label: "Is this your first job?"
-                                      }
-                                    },
+                                    { attrs: { label: "Country" } },
                                     [
-                                      _c(
-                                        "b-radio",
-                                        {
-                                          attrs: { "native-value": "1" },
-                                          model: {
-                                            value: _vm.employ.is_first_job,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "is_first_job",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.is_first_job"
-                                          }
-                                        },
-                                        [_vm._v("Yes")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "b-radio",
-                                        {
-                                          attrs: { "native-value": "0" },
-                                          model: {
-                                            value: _vm.employ.is_first_job,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "is_first_job",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.is_first_job"
-                                          }
-                                        },
-                                        [_vm._v("No")]
-                                      )
+                                      _c("b-input", {
+                                        attrs: { placeholder: "Country" },
+                                        model: {
+                                          value: _vm.nAddresses.country_work,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "country_work",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "nAddresses.country_work"
+                                        }
+                                      })
                                     ],
                                     1
                                   )
@@ -39796,45 +39091,55 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    { attrs: { label: "Local or Abroad" } },
+                                    { attrs: { label: "Province" } },
                                     [
-                                      _c(
-                                        "b-radio",
-                                        {
-                                          attrs: { "native-value": "Local" },
-                                          model: {
-                                            value: _vm.employ.work_category,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "work_category",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.work_category"
-                                          }
+                                      _c("b-input", {
+                                        attrs: { placeholder: "Province" },
+                                        model: {
+                                          value: _vm.nAddresses.province_work,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "province_work",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "nAddresses.province_work"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "columns" }, [
+                              _c(
+                                "div",
+                                { staticClass: "column" },
+                                [
+                                  _c(
+                                    "b-field",
+                                    { attrs: { label: "City/Municipality" } },
+                                    [
+                                      _c("b-input", {
+                                        attrs: {
+                                          placeholder: "City/Municipality"
                                         },
-                                        [_vm._v("Local")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "b-radio",
-                                        {
-                                          attrs: { "native-value": "Abroad" },
-                                          model: {
-                                            value: _vm.employ.work_category,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "work_category",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.work_category"
-                                          }
-                                        },
-                                        [_vm._v("Abroad")]
-                                      )
+                                        model: {
+                                          value: _vm.nAddresses.city_work,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "city_work",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "nAddresses.city_work"
+                                        }
+                                      })
                                     ],
                                     1
                                   )
@@ -39848,120 +39153,22 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    {
-                                      attrs: {
-                                        label:
-                                          "How long did it take to land the job?"
-                                      }
-                                    },
+                                    { attrs: { label: "District" } },
                                     [
-                                      _c(
-                                        "b-select",
-                                        {
-                                          attrs: {
-                                            placeholder:
-                                              "How long did it take to land the job?"
+                                      _c("b-input", {
+                                        attrs: { placeholder: "District" },
+                                        model: {
+                                          value: _vm.nAddresses.district_work,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "district_work",
+                                              $$v
+                                            )
                                           },
-                                          model: {
-                                            value: _vm.employ.take_job,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "take_job",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.take_job"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value: "Less than a month"
-                                              }
-                                            },
-                                            [_vm._v("Less than a month")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: { value: "1 to 6 months" }
-                                            },
-                                            [_vm._v("1 to 6 months")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: { value: "7 to 11 months" }
-                                            },
-                                            [_vm._v("7 to 11 months")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value:
-                                                  "1 year to less than 2 years"
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "1 year to less than 2 years"
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value:
-                                                  "2 year to less than 3 years"
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "2 year to less than 3 years"
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value:
-                                                  "3 year to less than 4 years"
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "3 year to less than 4 years"
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value:
-                                                  "4 year to less than 5 years"
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "4 year to less than 5 years"
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
+                                          expression: "nAddresses.district_work"
+                                        }
+                                      })
                                     ],
                                     1
                                   )
@@ -39977,125 +39184,117 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    {
-                                      attrs: {
-                                        label: "Monthly Range of Salary"
-                                      }
-                                    },
+                                    { attrs: { label: "Brgy/Street" } },
                                     [
-                                      _c(
-                                        "b-select",
-                                        {
-                                          attrs: {
-                                            placeholder:
-                                              "Monthly Range of Salary"
+                                      _c("b-input", {
+                                        attrs: { placeholder: "Brgy/Street" },
+                                        model: {
+                                          value: _vm.nAddresses.brgy_work,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "brgy_work",
+                                              $$v
+                                            )
                                           },
-                                          model: {
-                                            value: _vm.employ.monthly_range,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "monthly_range",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.monthly_range"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "Below 5,000" } },
-                                            [_vm._v("Below 5,000")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: { value: "5,000 - 10,000" }
-                                            },
-                                            [_vm._v("5,000 - 10,000")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value: "10,000 - 15,000"
-                                              }
-                                            },
-                                            [_vm._v("10,000 - 15,000")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value: "15,000 - 20,000"
-                                              }
-                                            },
-                                            [_vm._v("15,000 - 20,000")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value: "20,000 - 30,0000"
-                                              }
-                                            },
-                                            [_vm._v("20,000 - 30,0000")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value: "40,000 - 50,0000"
-                                              }
-                                            },
-                                            [_vm._v("40,000 - 50,0000")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value: "60,000 - 70,0000"
-                                              }
-                                            },
-                                            [_vm._v("60,000 - 70,0000")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value: "80,000 - 90,0000"
-                                              }
-                                            },
-                                            [_vm._v("80,000 - 90,0000")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value: "90,000 - 100,0000"
-                                              }
-                                            },
-                                            [_vm._v("90,000 - 100,0000")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: { value: "Above 100,000" }
-                                            },
-                                            [_vm._v("Above 100,000")]
-                                          )
-                                        ]
-                                      )
+                                          expression: "nAddresses.brgy_work"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "column" },
+                                [
+                                  _c(
+                                    "b-field",
+                                    { attrs: { label: "Zipcode" } },
+                                    [
+                                      _c("b-input", {
+                                        attrs: { placeholder: "Zipcode" },
+                                        model: {
+                                          value: _vm.nAddresses.zipcode_work,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "zipcode_work",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "nAddresses.zipcode_work"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("hr"),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "title is-5" }, [
+                              _vm._v("Present Address")
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "columns" }, [
+                              _c(
+                                "div",
+                                { staticClass: "column" },
+                                [
+                                  _c(
+                                    "b-field",
+                                    { attrs: { label: "Country" } },
+                                    [
+                                      _c("b-input", {
+                                        attrs: { placeholder: "Country" },
+                                        model: {
+                                          value: _vm.nAddresses.country_perm,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "country_perm",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "nAddresses.country_perm"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "column" },
+                                [
+                                  _c(
+                                    "b-field",
+                                    { attrs: { label: "Province" } },
+                                    [
+                                      _c("b-input", {
+                                        attrs: { placeholder: "Province" },
+                                        model: {
+                                          value: _vm.nAddresses.province_perm,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "province_perm",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "nAddresses.province_perm"
+                                        }
+                                      })
                                     ],
                                     1
                                   )
@@ -40111,62 +39310,53 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    {
-                                      attrs: {
-                                        label:
-                                          "Please rate your level of satisfaction in your current job"
-                                      }
-                                    },
+                                    { attrs: { label: "City/Municipality" } },
                                     [
-                                      _c(
-                                        "b-select",
-                                        {
-                                          attrs: {
-                                            placeholder:
-                                              "Please rate your level of satisfaction in your current job"
-                                          },
-                                          model: {
-                                            value: _vm.employ.satisfy_job,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "satisfy_job",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.satisfy_job"
-                                          }
+                                      _c("b-input", {
+                                        attrs: {
+                                          placeholder: "City/Municipality"
                                         },
-                                        [
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value: "4 - very highly"
-                                              }
-                                            },
-                                            [_vm._v("4 - very highly")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "3 - highly" } },
-                                            [_vm._v("3 - highly")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "2 - fairly" } },
-                                            [_vm._v("2 - fairly")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "1 - poorly" } },
-                                            [_vm._v("1 - poorly")]
-                                          )
-                                        ]
-                                      )
+                                        model: {
+                                          value: _vm.nAddresses.city_perm,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "city_perm",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "nAddresses.city_perm"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "column" },
+                                [
+                                  _c(
+                                    "b-field",
+                                    { attrs: { label: "District" } },
+                                    [
+                                      _c("b-input", {
+                                        attrs: { placeholder: "District" },
+                                        model: {
+                                          value: _vm.nAddresses.district_perm,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "district_perm",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "nAddresses.district_perm"
+                                        }
+                                      })
                                     ],
                                     1
                                   )
@@ -40182,134 +39372,51 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    {
-                                      attrs: {
-                                        label:
-                                          "How does the course/program contribute to your personal and professional growth in terms of"
-                                      }
-                                    },
+                                    { attrs: { label: "Brgy/Street" } },
                                     [
-                                      _c(
-                                        "b-select",
-                                        {
-                                          attrs: {
-                                            placeholder:
-                                              "How does the program contribute to your personal and professional growth in terms of",
-                                            required: ""
+                                      _c("b-input", {
+                                        attrs: { placeholder: "Brgy/Street" },
+                                        model: {
+                                          value: _vm.nAddresses.brgy_perm,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "brgy_perm",
+                                              $$v
+                                            )
                                           },
-                                          model: {
-                                            value: _vm.employ.growth,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "growth",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.growth"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value: "4 - very highly"
-                                              }
-                                            },
-                                            [_vm._v("4 - very highly")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "3 - highly" } },
-                                            [_vm._v("3 - highly")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "2 - fairly" } },
-                                            [_vm._v("2 - fairly")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "1 - poorly" } },
-                                            [_vm._v("1 - poorly")]
-                                          )
-                                        ]
-                                      )
+                                          expression: "nAddresses.brgy_perm"
+                                        }
+                                      })
                                     ],
                                     1
                                   )
                                 ],
                                 1
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "columns" }, [
+                              ),
+                              _vm._v(" "),
                               _c(
                                 "div",
                                 { staticClass: "column" },
                                 [
                                   _c(
                                     "b-field",
-                                    {
-                                      attrs: {
-                                        label:
-                                          "How would you rate the degree program you've earned in GADTC in terms of Note: FOR GADTC GRADUATES ONLY"
-                                      }
-                                    },
+                                    { attrs: { label: "Zipcode" } },
                                     [
-                                      _c(
-                                        "b-select",
-                                        {
-                                          attrs: {
-                                            placeholder:
-                                              "How would you rate the degree program you've earned in GADTC in terms of"
+                                      _c("b-input", {
+                                        attrs: { placeholder: "Zipcode" },
+                                        model: {
+                                          value: _vm.nAddresses.zipcode_perm,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.nAddresses,
+                                              "zipcode_perm",
+                                              $$v
+                                            )
                                           },
-                                          model: {
-                                            value: _vm.employ.degree_earned,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.employ,
-                                                "degree_earned",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "employ.degree_earned"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                value: "4 - very highly"
-                                              }
-                                            },
-                                            [_vm._v("4 - very highly")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "3 - highly" } },
-                                            [_vm._v("3 - highly")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "2 - fairly" } },
-                                            [_vm._v("2 - fairly")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "option",
-                                            { attrs: { value: "1 - poorly" } },
-                                            [_vm._v("1 - poorly")]
-                                          )
-                                        ]
-                                      )
+                                          expression: "nAddresses.zipcode_perm"
+                                        }
+                                      })
                                     ],
                                     1
                                   )
@@ -40330,14 +39437,1037 @@ var render = function() {
                             ])
                           ]
                         )
-                      ]
-                    )
-                  ],
-                  1
-                )
-              ],
-              1
-            )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "b-tab-item",
+                        { attrs: { label: "Employment Information" } },
+                        [
+                          _c(
+                            "form",
+                            {
+                              on: {
+                                submit: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.submitEmployment($event)
+                                }
+                              }
+                            },
+                            [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.employ.employment_id,
+                                    expression: "employ.employment_id"
+                                  }
+                                ],
+                                attrs: { type: "hidden" },
+                                domProps: { value: _vm.employ.employment_id },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.$set(
+                                      _vm.employ,
+                                      "employment_id",
+                                      $event.target.value
+                                    )
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "Are you employed?" } },
+                                      [
+                                        _c(
+                                          "b-radio",
+                                          {
+                                            attrs: { "native-value": "1" },
+                                            model: {
+                                              value: _vm.employ.is_employed,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "is_employed",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "employ.is_employed"
+                                            }
+                                          },
+                                          [_vm._v("Yes")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "b-radio",
+                                          {
+                                            attrs: { "native-value": "0" },
+                                            model: {
+                                              value: _vm.employ.is_employed,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "is_employed",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "employ.is_employed"
+                                            }
+                                          },
+                                          [_vm._v("No")]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: { label: "Name of Organization" }
+                                      },
+                                      [
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Name of Organization"
+                                          },
+                                          model: {
+                                            value: _vm.employ.organization,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.employ,
+                                                "organization",
+                                                $$v
+                                              )
+                                            },
+                                            expression: "employ.organization"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: { label: "Designation/Position" }
+                                      },
+                                      [
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Designation"
+                                          },
+                                          model: {
+                                            value: _vm.employ.designation,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.employ,
+                                                "designation",
+                                                $$v
+                                              )
+                                            },
+                                            expression: "employ.designation"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "From/To" } },
+                                      [
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Year From"
+                                          },
+                                          model: {
+                                            value: _vm.employ.year_from,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.employ,
+                                                "year_from",
+                                                $$v
+                                              )
+                                            },
+                                            expression: "employ.year_from"
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("b-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Year To"
+                                          },
+                                          model: {
+                                            value: _vm.employ.year_to,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.employ,
+                                                "year_to",
+                                                $$v
+                                              )
+                                            },
+                                            expression: "employ.year_to"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: {
+                                          label:
+                                            "Is to your current job in line with your degree earned of program?"
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "b-select",
+                                          {
+                                            attrs: {
+                                              placeholder:
+                                                "In line to your current job?"
+                                            },
+                                            model: {
+                                              value: _vm.employ.current_job,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "current_job",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "employ.current_job"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "1" } },
+                                              [_vm._v("Yes")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "0" } },
+                                              [_vm._v("No")]
+                                            )
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "Employment Type" } },
+                                      [
+                                        _c(
+                                          "b-select",
+                                          {
+                                            attrs: {
+                                              placeholder: "Employment Type"
+                                            },
+                                            model: {
+                                              value: _vm.employ.employment_type,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "employment_type",
+                                                  $$v
+                                                )
+                                              },
+                                              expression:
+                                                "employ.employment_type"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "Regular" } },
+                                              [_vm._v("Regular")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: { value: "Contractual" }
+                                              },
+                                              [_vm._v("Contractual")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "Job Order" } },
+                                              [_vm._v("Part Time")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              { attrs: { value: "Casual" } },
+                                              [_vm._v("Casual")]
+                                            )
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "Occupational Type" } },
+                                      [
+                                        _c(
+                                          "b-select",
+                                          {
+                                            attrs: {
+                                              placeholder: "Occupational Type"
+                                            },
+                                            model: {
+                                              value: _vm.employ.occupation_type,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "occupation_type",
+                                                  $$v
+                                                )
+                                              },
+                                              expression:
+                                                "employ.occupation_type"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: { value: "Government" }
+                                              },
+                                              [_vm._v("Government")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "Non-Government"
+                                                }
+                                              },
+                                              [_vm._v("Non-Government")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "Religious Sector"
+                                                }
+                                              },
+                                              [_vm._v("Religious Sector")]
+                                            )
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: {
+                                          label: "Is this your first job?"
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "b-radio",
+                                          {
+                                            attrs: { "native-value": "1" },
+                                            model: {
+                                              value: _vm.employ.is_first_job,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "is_first_job",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "employ.is_first_job"
+                                            }
+                                          },
+                                          [_vm._v("Yes")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "b-radio",
+                                          {
+                                            attrs: { "native-value": "0" },
+                                            model: {
+                                              value: _vm.employ.is_first_job,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "is_first_job",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "employ.is_first_job"
+                                            }
+                                          },
+                                          [_vm._v("No")]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      { attrs: { label: "Local or Abroad" } },
+                                      [
+                                        _c(
+                                          "b-radio",
+                                          {
+                                            attrs: { "native-value": "Local" },
+                                            model: {
+                                              value: _vm.employ.work_category,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "work_category",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "employ.work_category"
+                                            }
+                                          },
+                                          [_vm._v("Local")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "b-radio",
+                                          {
+                                            attrs: { "native-value": "Abroad" },
+                                            model: {
+                                              value: _vm.employ.work_category,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "work_category",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "employ.work_category"
+                                            }
+                                          },
+                                          [_vm._v("Abroad")]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: {
+                                          label:
+                                            "How long did it take to land the job?"
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "b-select",
+                                          {
+                                            attrs: {
+                                              placeholder:
+                                                "How long did it take to land the job?"
+                                            },
+                                            model: {
+                                              value: _vm.employ.take_job,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "take_job",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "employ.take_job"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "Less than a month"
+                                                }
+                                              },
+                                              [_vm._v("Less than a month")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "1 to 6 months"
+                                                }
+                                              },
+                                              [_vm._v("1 to 6 months")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "7 to 11 months"
+                                                }
+                                              },
+                                              [_vm._v("7 to 11 months")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value:
+                                                    "1 year to less than 2 years"
+                                                }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "1 year to less than 2 years"
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value:
+                                                    "2 year to less than 3 years"
+                                                }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "2 year to less than 3 years"
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value:
+                                                    "3 year to less than 4 years"
+                                                }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "3 year to less than 4 years"
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value:
+                                                    "4 year to less than 5 years"
+                                                }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "4 year to less than 5 years"
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: {
+                                          label: "Monthly Range of Salary"
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "b-select",
+                                          {
+                                            attrs: {
+                                              placeholder:
+                                                "Monthly Range of Salary"
+                                            },
+                                            model: {
+                                              value: _vm.employ.monthly_range,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "monthly_range",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "employ.monthly_range"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: { value: "Below 5,000" }
+                                              },
+                                              [_vm._v("Below 5,000")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "5,000 - 10,000"
+                                                }
+                                              },
+                                              [_vm._v("5,000 - 10,000")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "10,000 - 15,000"
+                                                }
+                                              },
+                                              [_vm._v("10,000 - 15,000")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "15,000 - 20,000"
+                                                }
+                                              },
+                                              [_vm._v("15,000 - 20,000")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "20,000 - 30,0000"
+                                                }
+                                              },
+                                              [_vm._v("20,000 - 30,0000")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "40,000 - 50,0000"
+                                                }
+                                              },
+                                              [_vm._v("40,000 - 50,0000")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "60,000 - 70,0000"
+                                                }
+                                              },
+                                              [_vm._v("60,000 - 70,0000")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "80,000 - 90,0000"
+                                                }
+                                              },
+                                              [_vm._v("80,000 - 90,0000")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "90,000 - 100,0000"
+                                                }
+                                              },
+                                              [_vm._v("90,000 - 100,0000")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "Above 100,000"
+                                                }
+                                              },
+                                              [_vm._v("Above 100,000")]
+                                            )
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: {
+                                          label:
+                                            "Please rate your level of satisfaction in your current job"
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "b-select",
+                                          {
+                                            attrs: {
+                                              placeholder:
+                                                "Please rate your level of satisfaction in your current job"
+                                            },
+                                            model: {
+                                              value: _vm.employ.satisfy_job,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "satisfy_job",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "employ.satisfy_job"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "4 - very highly"
+                                                }
+                                              },
+                                              [_vm._v("4 - very highly")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: { value: "3 - highly" }
+                                              },
+                                              [_vm._v("3 - highly")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: { value: "2 - fairly" }
+                                              },
+                                              [_vm._v("2 - fairly")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: { value: "1 - poorly" }
+                                              },
+                                              [_vm._v("1 - poorly")]
+                                            )
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: {
+                                          label:
+                                            "How does the course/program contribute to your personal and professional growth in terms of"
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "b-select",
+                                          {
+                                            attrs: {
+                                              placeholder:
+                                                "How does the program contribute to your personal and professional growth in terms of",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value: _vm.employ.growth,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "growth",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "employ.growth"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "4 - very highly"
+                                                }
+                                              },
+                                              [_vm._v("4 - very highly")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: { value: "3 - highly" }
+                                              },
+                                              [_vm._v("3 - highly")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: { value: "2 - fairly" }
+                                              },
+                                              [_vm._v("2 - fairly")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: { value: "1 - poorly" }
+                                              },
+                                              [_vm._v("1 - poorly")]
+                                            )
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "b-field",
+                                      {
+                                        attrs: {
+                                          label:
+                                            "How would you rate the degree program you've earned in GADTC in terms of Note: FOR GADTC GRADUATES ONLY"
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "b-select",
+                                          {
+                                            attrs: {
+                                              placeholder:
+                                                "How would you rate the degree program you've earned in GADTC in terms of"
+                                            },
+                                            model: {
+                                              value: _vm.employ.degree_earned,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.employ,
+                                                  "degree_earned",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "employ.degree_earned"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: {
+                                                  value: "4 - very highly"
+                                                }
+                                              },
+                                              [_vm._v("4 - very highly")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: { value: "3 - highly" }
+                                              },
+                                              [_vm._v("3 - highly")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: { value: "2 - fairly" }
+                                              },
+                                              [_vm._v("2 - fairly")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "option",
+                                              {
+                                                attrs: { value: "1 - poorly" }
+                                              },
+                                              [_vm._v("1 - poorly")]
+                                            )
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "buttons is-right" }, [
+                                _c(
+                                  "button",
+                                  { staticClass: "button is-primary" },
+                                  [
+                                    _c("i", { staticClass: "fa fa-user" }),
+                                    _vm._v("  SAVE")
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ])
           ])
         ])
       ]),
