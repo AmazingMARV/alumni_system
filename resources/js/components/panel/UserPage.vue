@@ -66,11 +66,24 @@
                                             class="is-small"
                                             icon-right ="menu-down"/>
                                         </template>
-                                        <b-dropdown-item tag="a" :href="`/panel/user-page/`+props.row.user_id+`/edit`">Personal Information</b-dropdown-item>
-                                        <b-dropdown-item tag="a" :href="`/panel/user-education-page/`+props.row.user_id">Educational Information</b-dropdown-item>
-                                        <b-dropdown-item tag="a" :href="`/panel/user-eligibility-page/`+props.row.user_id">Eligibility</b-dropdown-item>
-                                        <b-dropdown-item tag="a" :href="`/panel/address-page/`+props.row.user_id+`/edit`">Addresses</b-dropdown-item>
-                                        <b-dropdown-item tag="a" :href="`/panel/employment-page/`+props.row.user_id+`/edit`">Employment Information</b-dropdown-item>
+                                        <b-dropdown-item tag="a" :href="`/panel/user-page/`+props.row.user_id+`/edit`"><b-icon pack="fa" icon="user"></b-icon>Personal Information</b-dropdown-item>
+                                        <b-dropdown-item tag="a" :href="`/panel/user-education-page/`+props.row.user_id">
+                                            <b-icon pack="fa" icon="graduation-cap"></b-icon>Educational Information
+                                        </b-dropdown-item>
+                                        
+                                        <b-dropdown-item tag="a" :href="`/panel/user-eligibility-page/`+props.row.user_id">
+                                            <b-icon pack="fa" icon="file-text-o"></b-icon>
+                                            Eligibility
+                                        </b-dropdown-item>
+                                        <b-dropdown-item tag="a" :href="`/panel/address-page/`+props.row.user_id+`/edit`">
+                                            <b-icon pack="fa" icon="map-marker"></b-icon>
+                                            Addresses
+                                        </b-dropdown-item>
+
+                                        <b-dropdown-item tag="a" :href="`/panel/employment-page/`+props.row.user_id+`/edit`">
+                                        <b-icon pack="fa" icon="users"></b-icon>
+                                            Employment Information
+                                        </b-dropdown-item>
                                         <b-dropdown-item
                                             @click="confirmDelete(props.row.user_id)">
                                             <b-icon pack="fa" icon='trash'></b-icon>

@@ -8,6 +8,15 @@ use App\Models\Employment;
 
 class EmploymentController extends Controller
 {
+
+    public function __construct()
+    {
+        # code...
+        $this->middleware('auth');
+        $this->middleware('admin');
+    }
+
+
     public function index(){
         return view('panel.employment-page');
     }

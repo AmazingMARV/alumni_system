@@ -2895,10 +2895,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['dataPrograms'],
   data: function data() {
@@ -5260,6 +5256,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -37732,13 +37741,14 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    { attrs: { label: "Sex" } },
+                                    { attrs: { label: "Sex", expanded: "" } },
                                     [
                                       _c(
                                         "b-select",
                                         {
                                           attrs: {
                                             placeholder: "Sex",
+                                            expanded: "",
                                             required: ""
                                           },
                                           model: {
@@ -37776,13 +37786,19 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    { attrs: { label: "Civil Status" } },
+                                    {
+                                      attrs: {
+                                        label: "Civil Status",
+                                        expanded: ""
+                                      }
+                                    },
                                     [
                                       _c(
                                         "b-select",
                                         {
                                           attrs: {
                                             placeholder: "Civil Status",
+                                            expanded: "",
                                             required: ""
                                           },
                                           model: {
@@ -37838,7 +37854,8 @@ var render = function() {
                                     "b-field",
                                     {
                                       attrs: {
-                                        label: "Membership Classification"
+                                        label: "Membership Classification",
+                                        expanded: ""
                                       }
                                     },
                                     [
@@ -37848,6 +37865,7 @@ var render = function() {
                                           attrs: {
                                             placeholder:
                                               "Membership Classification",
+                                            expanded: "",
                                             required: ""
                                           },
                                           model: {
@@ -37996,13 +38014,16 @@ var render = function() {
                                 [
                                   _c(
                                     "b-field",
-                                    { attrs: { label: "Programs" } },
+                                    {
+                                      attrs: { label: "Programs", expanded: "" }
+                                    },
                                     [
                                       _c(
                                         "b-select",
                                         {
                                           attrs: {
                                             placeholder: "Programs",
+                                            expanded: "",
                                             required: ""
                                           },
                                           model: {
@@ -45232,7 +45253,13 @@ var render = function() {
                                             "/edit"
                                         }
                                       },
-                                      [_vm._v("Personal Information")]
+                                      [
+                                        _c("b-icon", {
+                                          attrs: { pack: "fa", icon: "user" }
+                                        }),
+                                        _vm._v("Personal Information")
+                                      ],
+                                      1
                                     ),
                                     _vm._v(" "),
                                     _c(
@@ -45245,7 +45272,18 @@ var render = function() {
                                             props.row.user_id
                                         }
                                       },
-                                      [_vm._v("Educational Information")]
+                                      [
+                                        _c("b-icon", {
+                                          attrs: {
+                                            pack: "fa",
+                                            icon: "graduation-cap"
+                                          }
+                                        }),
+                                        _vm._v(
+                                          "Educational Information\n                                    "
+                                        )
+                                      ],
+                                      1
                                     ),
                                     _vm._v(" "),
                                     _c(
@@ -45258,7 +45296,18 @@ var render = function() {
                                             props.row.user_id
                                         }
                                       },
-                                      [_vm._v("Eligibility")]
+                                      [
+                                        _c("b-icon", {
+                                          attrs: {
+                                            pack: "fa",
+                                            icon: "file-text-o"
+                                          }
+                                        }),
+                                        _vm._v(
+                                          "\n                                        Eligibility\n                                    "
+                                        )
+                                      ],
+                                      1
                                     ),
                                     _vm._v(" "),
                                     _c(
@@ -45272,7 +45321,18 @@ var render = function() {
                                             "/edit"
                                         }
                                       },
-                                      [_vm._v("Addresses")]
+                                      [
+                                        _c("b-icon", {
+                                          attrs: {
+                                            pack: "fa",
+                                            icon: "map-marker"
+                                          }
+                                        }),
+                                        _vm._v(
+                                          "\n                                        Addresses\n                                    "
+                                        )
+                                      ],
+                                      1
                                     ),
                                     _vm._v(" "),
                                     _c(
@@ -45286,7 +45346,15 @@ var render = function() {
                                             "/edit"
                                         }
                                       },
-                                      [_vm._v("Employment Information")]
+                                      [
+                                        _c("b-icon", {
+                                          attrs: { pack: "fa", icon: "users" }
+                                        }),
+                                        _vm._v(
+                                          "\n                                        Employment Information\n                                    "
+                                        )
+                                      ],
+                                      1
                                     ),
                                     _vm._v(" "),
                                     _c(
