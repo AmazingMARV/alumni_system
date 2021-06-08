@@ -97,6 +97,11 @@
                                             <b-input type="text" placeholder="Contact Number"  v-model="fields.contact_number" required></b-input>
                                         </b-field>
                                         </div>
+                                         <div class="column">
+                                            <b-field label="Facebook Account">
+                                            <b-input type="text" placeholder="Facebook Account"  v-model="fields.fb_account" required></b-input>
+                                        </b-field>
+                                        </div>
                                     </div>
 
                                     <div class="columns">
@@ -206,6 +211,7 @@ export default {
             formData.append('email', this.fields.email);
             formData.append('sex', this.fields.sex);
             formData.append('role', this.fields.role);
+            formData.append('fb_account', this.fields.fb_account);
             formData.append('civil_status', this.fields.civil_status);
             formData.append('suffix', this.fields.suffix);
             formData.append('contact_number', this.fields.contact_number);

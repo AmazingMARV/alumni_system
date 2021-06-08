@@ -5178,6 +5178,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['user', 'dataPrograms'],
   data: function data() {
@@ -5213,6 +5218,7 @@ __webpack_require__.r(__webpack_exports__);
       formData.append('email', this.fields.email);
       formData.append('sex', this.fields.sex);
       formData.append('role', this.fields.role);
+      formData.append('fb_account', this.fields.fb_account);
       formData.append('civil_status', this.fields.civil_status);
       formData.append('suffix', this.fields.suffix);
       formData.append('contact_number', this.fields.contact_number);
@@ -44677,6 +44683,35 @@ var render = function() {
                                         )
                                       },
                                       expression: "fields.contact_number"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "column" },
+                            [
+                              _c(
+                                "b-field",
+                                { attrs: { label: "Facebook Account" } },
+                                [
+                                  _c("b-input", {
+                                    attrs: {
+                                      type: "text",
+                                      placeholder: "Facebook Account",
+                                      required: ""
+                                    },
+                                    model: {
+                                      value: _vm.fields.fb_account,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.fields, "fb_account", $$v)
+                                      },
+                                      expression: "fields.fb_account"
                                     }
                                   })
                                 ],
