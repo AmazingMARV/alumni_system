@@ -438,8 +438,8 @@
                                         <!-- Employment Info v1 -->
                                         <div class="columns">
                                             <div class="column">
-                                                <b-field label="Name of Organization">
-                                                    <b-input type="text" placeholder="Name of Organization" v-model="employ.organization" ></b-input>
+                                                <b-field label="Name of Organization/Company">
+                                                    <b-input type="text" placeholder="Name of Organization/Company" v-model="employ.organization" ></b-input>
                                                 </b-field>
                                             </div> <!--Close Column-->
                                             <div class="column">

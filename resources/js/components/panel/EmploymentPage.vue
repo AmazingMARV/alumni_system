@@ -21,13 +21,13 @@
                                     <!-- Employment Info v1 -->
                                     <div class="columns">
                                         <div class="column">
-                                            <b-field label="Name of Organization">
-                                                <b-input type="text" placeholder="Name of Organization" v-model="employ.organization" ></b-input>
+                                            <b-field label="Name of Organization/Company">
+                                                <b-input type="text" placeholder="Name of Organization/Company" v-model="employ.organization" ></b-input>
                                             </b-field>
                                         </div> <!--Close Column-->
                                         <div class="column">
-                                            <b-field label="Designation">
-                                                <b-input type="text"  placeholder="Designation" v-model="employ.designation" ></b-input>
+                                            <b-field label="Designation/Position">
+                                                <b-input type="text"  placeholder="Designation/Position" v-model="employ.designation" ></b-input>
                                             </b-field>
                                         </div> <!--Close Column-->
                                         <div class="column">
@@ -42,7 +42,7 @@
                                       <!--Job Inline-->
                                     <div class="columns">
                                         <div class="column">
-                                    <b-field label="In line to your current job?">
+                                    <b-field label="Is your current job in line with your degree earned of program?">
                                         <b-select placeholder="In line to your current job?" v-model="employ.current_job" >
                                             <option value="1">Yes</option>
                                             <option value="0">No</option>
@@ -106,8 +106,8 @@
                                     
                                     <div class="columns">
                                         <div class="column">
-                                            <b-field label="Monthly Range">
-                                        <b-select placeholder="Monthly Range" v-model="employ.monthly_range">
+                                            <b-field label="Monthly Range of Salary">
+                                        <b-select placeholder="Monthly Range of Salary" v-model="employ.monthly_range">
                                             <option value="Below 5,000">Below 5,000</option>
                                             <option value="5,000 - 10,000">5,000 - 10,000</option>
                                             <option value="10,000 - 15,000">10,000 - 15,000</option>

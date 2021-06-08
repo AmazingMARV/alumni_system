@@ -7,15 +7,15 @@
                 <input type="hidden" v-model="fields.eligibility_id"/>
                       <!-- Type of Eligibility -->
                         <div class="column">
-                            <b-field label="Name of Eligibility">
-                                <b-input placeholder="Name of Eligibility" v-model="fields.eligible"></b-input>
+                            <b-field label="Eligibility">
+                                <b-input placeholder="Eligibility" v-model="fields.eligible"></b-input>
                             </b-field>
                         </div> <!--close column-->
 
                         <!-- Date Acquired -->
                         <div class="column">
-                            <b-field label="Date Acquired">
-                                <b-input placeholder="Date Acquired" v-model="fields.date_acquired"></b-input>
+                            <b-field label="Eligible since (year)">
+                                <b-input placeholder="Eligible since (year)" v-model="fields.date_acquired"></b-input>
                             </b-field>
                         </div> <!--close column-->
 
@@ -28,8 +28,8 @@
 
                             <!-- License ID -->
                         <div class="column">
-                            <b-field label="License ID">
-                                <b-input placeholder="License ID" v-model="fields.license_id"></b-input>
+                            <b-field label="License Number">
+                                <b-input placeholder="License Number" v-model="fields.license_id"></b-input>
                             </b-field>
                         </div> <!--close column-->
                          <div class="buttons mt-3">

@@ -22,11 +22,11 @@
                                 {{ props.row.eligibility_id }}
                         </b-table-column>
 
-                        <b-table-column field="eligible" label="Name of Eligibility" v-slot="props">
+                        <b-table-column field="eligible" label="Eligibility" v-slot="props">
                                 {{ props.row.eligible }}
                         </b-table-column>
 
-                        <b-table-column field="date_acquired" label="Date Acquired" v-slot="props">
+                        <b-table-column field="date_acquired" label="Eligible since (year)" v-slot="props">
                                 {{ props.row.date_acquired }}
                         </b-table-column>
 
@@ -35,7 +35,7 @@
                                 {{ props.row.rating }}
                         </b-table-column>
 
-                        <b-table-column field="license_id" label="License ID" v-slot="props">
+                        <b-table-column field="license_id" label="License Number" v-slot="props">
                                 {{ props.row.license_id }}
                         </b-table-column>
 

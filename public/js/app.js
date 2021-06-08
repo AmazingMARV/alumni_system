@@ -39548,13 +39548,16 @@ var render = function() {
                                     _c(
                                       "b-field",
                                       {
-                                        attrs: { label: "Name of Organization" }
+                                        attrs: {
+                                          label: "Name of Organization/Company"
+                                        }
                                       },
                                       [
                                         _c("b-input", {
                                           attrs: {
                                             type: "text",
-                                            placeholder: "Name of Organization"
+                                            placeholder:
+                                              "Name of Organization/Company"
                                           },
                                           model: {
                                             value: _vm.employ.organization,
@@ -41479,7 +41482,7 @@ var render = function() {
                       _c("hr"),
                       _vm._v(" "),
                       _c("div", { staticClass: "title is-5" }, [
-                        _vm._v("Permanent Address")
+                        _vm._v("Present Address")
                       ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "columns" }, [
@@ -42266,10 +42269,10 @@ var render = function() {
                 [
                   _c(
                     "b-field",
-                    { attrs: { label: "Name of Eligibility" } },
+                    { attrs: { label: "Eligibility" } },
                     [
                       _c("b-input", {
-                        attrs: { placeholder: "Name of Eligibility" },
+                        attrs: { placeholder: "Eligibility" },
                         model: {
                           value: _vm.fields.eligible,
                           callback: function($$v) {
@@ -42291,10 +42294,10 @@ var render = function() {
                 [
                   _c(
                     "b-field",
-                    { attrs: { label: "Date Acquired" } },
+                    { attrs: { label: "Eligible since (year)" } },
                     [
                       _c("b-input", {
-                        attrs: { placeholder: "Date Acquired" },
+                        attrs: { placeholder: "Eligible since (year)" },
                         model: {
                           value: _vm.fields.date_acquired,
                           callback: function($$v) {
@@ -42341,10 +42344,10 @@ var render = function() {
                 [
                   _c(
                     "b-field",
-                    { attrs: { label: "License ID" } },
+                    { attrs: { label: "License Number" } },
                     [
                       _c("b-input", {
-                        attrs: { placeholder: "License ID" },
+                        attrs: { placeholder: "License Number" },
                         model: {
                           value: _vm.fields.license_id,
                           callback: function($$v) {
@@ -42447,7 +42450,7 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("b-table-column", {
-                attrs: { field: "eligible", label: "Name of Eligibility" },
+                attrs: { field: "eligible", label: "Eligibility" },
                 scopedSlots: _vm._u([
                   {
                     key: "default",
@@ -42465,7 +42468,10 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("b-table-column", {
-                attrs: { field: "date_acquired", label: "Date Acquired" },
+                attrs: {
+                  field: "date_acquired",
+                  label: "Eligible since (year)"
+                },
                 scopedSlots: _vm._u([
                   {
                     key: "default",
@@ -42501,7 +42507,7 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("b-table-column", {
-                attrs: { field: "license_id", label: "License ID" },
+                attrs: { field: "license_id", label: "License Number" },
                 scopedSlots: _vm._u([
                   {
                     key: "default",
@@ -42685,12 +42691,12 @@ var render = function() {
                       [
                         _c(
                           "b-field",
-                          { attrs: { label: "Name of Organization" } },
+                          { attrs: { label: "Name of Organization/Company" } },
                           [
                             _c("b-input", {
                               attrs: {
                                 type: "text",
-                                placeholder: "Name of Organization"
+                                placeholder: "Name of Organization/Company"
                               },
                               model: {
                                 value: _vm.employ.organization,
@@ -42713,12 +42719,12 @@ var render = function() {
                       [
                         _c(
                           "b-field",
-                          { attrs: { label: "Designation" } },
+                          { attrs: { label: "Designation/Position" } },
                           [
                             _c("b-input", {
                               attrs: {
                                 type: "text",
-                                placeholder: "Designation"
+                                placeholder: "Designation/Position"
                               },
                               model: {
                                 value: _vm.employ.designation,
@@ -42779,7 +42785,12 @@ var render = function() {
                       [
                         _c(
                           "b-field",
-                          { attrs: { label: "In line to your current job?" } },
+                          {
+                            attrs: {
+                              label:
+                                "Is your current job in line with your degree earned of program?"
+                            }
+                          },
                           [
                             _c(
                               "b-select",
@@ -43096,12 +43107,14 @@ var render = function() {
                       [
                         _c(
                           "b-field",
-                          { attrs: { label: "Monthly Range" } },
+                          { attrs: { label: "Monthly Range of Salary" } },
                           [
                             _c(
                               "b-select",
                               {
-                                attrs: { placeholder: "Monthly Range" },
+                                attrs: {
+                                  placeholder: "Monthly Range of Salary"
+                                },
                                 model: {
                                   value: _vm.employ.monthly_range,
                                   callback: function($$v) {

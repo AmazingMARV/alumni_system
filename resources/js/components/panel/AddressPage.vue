@@ -100,8 +100,8 @@
                                         </div><!--close columns-->
 
                                         <hr>
-                                        <!--Permanent Address-->
-                                        <div class="title is-5">Permanent Address</div>
+                                        <!--Present Address-->
+                                        <div class="title is-5">Present Address</div>
                                         <div class="columns">
                                             <div class="column">
                                                 <!-- Country -->
