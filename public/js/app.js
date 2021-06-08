@@ -2907,6 +2907,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['dataPrograms'],
   data: function data() {
@@ -38041,6 +38042,10 @@ var render = function() {
                                 )
                               ]),
                               _vm._v(" "),
+                              _c("h2", [
+                                _c("span", [_vm._v("LAST SCHOOL INFORMATION")])
+                              ]),
+                              _vm._v(" "),
                               _c("div", { staticClass: "columns" }, [
                                 _c(
                                   "div",
@@ -38187,12 +38192,6 @@ var render = function() {
                         "b-tab-item",
                         { attrs: { label: "Educational Advancement" } },
                         [
-                          _c("i", [
-                            _vm._v(
-                              "(Masteral, Doctoral Programs and other units earned after your graduation in college)"
-                            )
-                          ]),
-                          _vm._v(" "),
                           _c(
                             "form",
                             {
@@ -38209,6 +38208,12 @@ var render = function() {
                                   "div",
                                   { staticClass: "column is-10 is-offset-1" },
                                   [
+                                    _c("i", [
+                                      _vm._v(
+                                        "(Masteral, Doctoral Programs and other units earned after your graduation in college)"
+                                      )
+                                    ]),
+                                    _vm._v(" "),
                                     _vm._l(this.educations, function(
                                       educ,
                                       index
@@ -38612,7 +38617,7 @@ var render = function() {
                                         _c("div", { staticClass: "columns" }, [
                                           _c(
                                             "div",
-                                            { staticClass: "column" },
+                                            { staticClass: "column is-8" },
                                             [
                                               _c(
                                                 "b-field",
@@ -38648,7 +38653,7 @@ var render = function() {
                                           _vm._v(" "),
                                           _c(
                                             "div",
-                                            { staticClass: "column" },
+                                            { staticClass: "column is-4" },
                                             [
                                               _c(
                                                 "b-field",
@@ -38683,8 +38688,10 @@ var render = function() {
                                               )
                                             ],
                                             1
-                                          ),
-                                          _vm._v(" "),
+                                          )
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("div", { staticClass: "columns" }, [
                                           _c(
                                             "div",
                                             { staticClass: "column" },
@@ -39663,7 +39670,9 @@ var render = function() {
                                       {
                                         attrs: {
                                           label:
-                                            "Is to your current job in line with your degree earned of program?"
+                                            "Is your current job in line with your degree earned of program?",
+                                          expanded: "",
+                                          horizontal: ""
                                         }
                                       },
                                       [
@@ -39705,8 +39714,10 @@ var render = function() {
                                     )
                                   ],
                                   1
-                                ),
-                                _vm._v(" "),
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "columns" }, [
                                 _c(
                                   "div",
                                   { staticClass: "column" },

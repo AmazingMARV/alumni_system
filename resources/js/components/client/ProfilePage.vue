@@ -110,6 +110,7 @@
                                             </div>
                                         </div>
 
+                                        <h2><span>LAST SCHOOL INFORMATION</span></h2>
                                         <div class="columns">
                                             <div class="column">
                                                 <b-field label="Programs" expanded>
@@ -147,10 +148,12 @@
 
                                 <!-- Educational Information -->
                                 <b-tab-item label="Educational Advancement">
-                                    <i>(Masteral, Doctoral Programs and other units earned after your graduation in college)</i>
+
                                     <form @submit.prevent="submitEducation">
                                         <div class="columns">
                                                 <div class="column is-10 is-offset-1">
+                                                    <i>(Masteral, Doctoral Programs and other units earned after your graduation in college)</i>
+
                                                     <div class="educ-wrapper" v-for="(educ, index) in this.educations" :key="index">
                                                         <input type="hidden" v-model="educ.education_id"/>
                                                         <div class="columns">
@@ -223,38 +226,35 @@
                                                     <div class="educ-wrapper" v-for="(eligible, index) in this.eligibilities" :key="index">
                                                        <input type="hidden" v-model="eligible.eligibility_id"/>
                                                         <div class="columns">
-
-
                                                                 <!-- Type of Eligibility -->
-                                                            <div class="column">
+                                                            <div class="column is-8">
                                                                 <b-field label="Eligibility">
                                                                     <b-input placeholder="Eligibility" v-model="eligible.eligible"></b-input>
                                                                 </b-field>
                                                             </div> <!--close column-->
-
                                                             <!-- Date Acquired -->
-                                                            <div class="column">
+                                                            <div class="column is-4">
                                                                 <b-field label="Eligible Since (Year)">
                                                                     <b-input placeholder="Eligible Since (Year)" v-model="eligible.date_acquired"></b-input>
                                                                 </b-field>
                                                             </div> <!--close column-->
+                                                        </div> <!--close columns-->
 
-                                                            <!-- Rating -->
+                                                        <div class="columns">
                                                             <div class="column">
                                                                 <b-field label="Rating">
                                                                     <b-input placeholder="Rating" v-model="eligible.rating"></b-input>
                                                                 </b-field>
                                                             </div> <!--close column-->
 
-                                                             <!-- License ID -->
+                                                            <!-- License ID -->
                                                             <div class="column">
                                                                 <b-field label="License Number">
                                                                     <b-input placeholder="License Number" v-model="eligible.license_id"></b-input>
                                                                 </b-field>
                                                             </div> <!--close column-->
+                                                        </div>
 
-
-                                                        </div> <!--close columns-->
                                                         <div class="buttons mt-3">
                                                             <button class="button is-small is-danger is-outlined"  @click="removeEligible(index)">REMOVE</button>
                                                         </div>
@@ -423,8 +423,6 @@
 
                                 <b-tab-item label="Employment Information">
 
-
-
                                     <form @submit.prevent="submitEmployment">
                                                  <!-- Are you employed-->
                                         <input type="hidden" v-model="employ.employment_id">
@@ -459,35 +457,38 @@
                                         </div> <!--Close Columns-->
 
                                           <!--Job Inline-->
+
                                         <div class="columns">
                                             <div class="column">
-                                        <b-field label="Is to your current job in line with your degree earned of program?">
-                                            <b-select placeholder="In line to your current job?" v-model="employ.current_job" >
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                            </b-select>
-                                        </b-field>
+                                                <b-field label="Is your current job in line with your degree earned of program?" expanded horizontal>
+                                                    <b-select placeholder="In line to your current job?" v-model="employ.current_job">
+                                                        <option value="1">Yes</option>
+                                                        <option value="0">No</option>
+                                                    </b-select>
+                                                </b-field>
                                             </div> <!--Close Column-->
+                                        </div>
+                                        <div class="columns">
                                             <div class="column">
-                                        <b-field label="Employment Type">
-                                            <b-select placeholder="Employment Type" v-model="employ.employment_type">
-                                                <option value="Regular">Regular</option>
-                                                <option value="Contractual">Contractual</option>
-                                                <option value="Job Order">Part Time</option>
-                                                <option value="Casual">Casual</option>
-
-                                            </b-select>
-                                        </b-field>
+                                                <b-field label="Employment Type">
+                                                    <b-select placeholder="Employment Type" v-model="employ.employment_type">
+                                                        <option value="Regular">Regular</option>
+                                                        <option value="Contractual">Contractual</option>
+                                                        <option value="Job Order">Part Time</option>
+                                                        <option value="Casual">Casual</option>
+                                                    </b-select>
+                                                </b-field>
                                             </div> <!--Close Column-->
-                                            <div class="column">
-                                        <b-field label="Occupational Type">
-                                            <b-select placeholder="Occupational Type" v-model="employ.occupation_type">
-                                                <option value="Government">Government</option>
-                                                <option value="Non-Government">Non-Government</option>
-                                                <option value="Religious Sector">Religious Sector</option>
 
-                                            </b-select>
-                                        </b-field>
+                                            <div class="column">
+                                                <b-field label="Occupational Type">
+                                                    <b-select placeholder="Occupational Type" v-model="employ.occupation_type">
+                                                        <option value="Government">Government</option>
+                                                        <option value="Non-Government">Non-Government</option>
+                                                        <option value="Religious Sector">Religious Sector</option>
+
+                                                    </b-select>
+                                                </b-field>
                                             </div> <!--Close Column-->
                                         </div> <!--Close Columns-->
 
