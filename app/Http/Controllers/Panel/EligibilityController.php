@@ -12,6 +12,7 @@ class EligibilityController extends Controller
     //
     public function __construct(){
         $this->middleware('auth');
+        $this->middleware('admin');
     }
 
     public function index(){
@@ -24,8 +25,6 @@ class EligibilityController extends Controller
         ->with('eligibilities', $data)
         ->with('id',$id);
         
-        
-
     }
 
     public function update(Request $req, $id){

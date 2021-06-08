@@ -10,6 +10,7 @@ use App\Models\Address;
 class AddressesController extends Controller
 {
     //
+    
     public function index(){
         return view('panel.address-page');
     }
