@@ -11,21 +11,23 @@
                                 <b-tab-item label="Personal Information">
                                     <form @submit.prevent="submitInformation">
                                          <!-- Name -->
-                                        <div>
-                                             <div>
-                                                 <img :src="fields.profile_image" @click="openModal" alt="..." class="img-wrapper"/>
-                                             </div>
+                                        <div class="columns">
+                                            <div class="column">
+                                                <div class="avatar-container">
+                                                    <img :src="fields.profile_image" @click="openModal" alt="..." />
+                                                </div>
 
-                                             <b-field class="file" :class="{'has-name' : !fields.image}">
+                                                <b-field class="file" :class="{'has-name' : !fields.image}">
                                                     <b-upload v-model="fields.image" class="file-label">
-                                                        <span class="file-cta">
-                                                            <b-icon class="file-icon" icon="upload"></b-icon>
-                                                                 <span class="file-label">Click to upload</span>
-
-                                                        </span>
+                                                            <span class="file-cta">
+                                                                <b-icon class="file-icon" icon="upload"></b-icon>
+                                                                <span class="file-label">Click to upload</span>
+                                                            </span>
                                                         <span class="file-name" v-if="fields.image"> {{fields.image.name}} </span>
                                                     </b-upload>
                                                 </b-field>
+                                                <div style="color:red; font-style: italic;">Image size limit to 300kb only.</div>
+                                            </div>
                                         </div>
 
                                         <div class="columns">
@@ -44,8 +46,6 @@
                                                     <b-input type="text" placeholder="Last Name" v-model="fields.lname" required ></b-input>
                                                 </b-field>
                                             </div>
-
-
                                         </div> <!--close columns-->
 
                                         <div class="columns">
@@ -720,6 +720,11 @@ export default {
         },
 
         submitInformation(){
+
+            if(this.fields.image.size > 300000){
+                alert('Image size must be atleast 300kb in size.');
+                return;
+            }
             var form = new FormData();
 
             form.append('fname', this.fields.fname);
@@ -747,6 +752,7 @@ export default {
                     title: 'UPDATED!',
                     message: 'Your profile successfully updated.',
                     type: 'is-success',
+                    onConfirm: ()=> window.location = '/profile-page'
 
                 });
             })
@@ -850,6 +856,21 @@ export default {
         background:#fff;
         padding:0 10px;
     }
+
+   .avatar-container{
+       height: 200px;
+       width: 165px;
+       border: 1px solid #d0d0d0;
+
+   }
+
+   .avatar-container img{
+       width: inherit;
+       height: inherit;
+       object-fit: cover;
+
+   }
+
 
 
 </style>

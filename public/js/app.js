@@ -2235,6 +2235,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2986,6 +2988,11 @@ __webpack_require__.r(__webpack_exports__);
     submitInformation: function submitInformation() {
       var _this2 = this;
 
+      if (this.fields.image.size > 300000) {
+        alert('Image size must be atleast 300kb in size.');
+        return;
+      }
+
       var form = new FormData();
       form.append('fname', this.fields.fname);
       form.append('lname', this.fields.lname);
@@ -3009,7 +3016,10 @@ __webpack_require__.r(__webpack_exports__);
         if (res.data.status === 'updated') _this2.$buefy.dialog.alert({
           title: 'UPDATED!',
           message: 'Your profile successfully updated.',
-          type: 'is-success'
+          type: 'is-success',
+          onConfirm: function onConfirm() {
+            return window.location = '/profile-page';
+          }
         });
       });
     },
@@ -23504,7 +23514,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.newsfeed-wrapper[data-v-20b72577]{\n    padding: 15px;\n    background-color: rgb(226, 207, 207);\n    border-radius: 5px;\n    margin-bottom: 20px;\n}\n.newsfeed-header[data-v-20b72577]{\n   display: flex;\n   justify-content: flex-end;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.newsfeed-wrapper[data-v-20b72577]{\n    padding: 15px;\n    background-color: rgb(249, 249, 249);\n    border-radius: 5px;\n    margin-bottom: 20px;\n    border-top: 2px solid green;\n}\n.newsfeed-header[data-v-20b72577]{\n   display: flex;\n   justify-content: flex-end;\n}\n.announcement-text[data-v-20b72577]{\n    margin-top: 15px;\n    font-size: 1.3em;\n    font-weight: bold;\n}\n.announcement-body[data-v-20b72577]{\n    margin-top: 15px;\n    margin-left: 15px;\n    margin-bottom: 20px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -23528,7 +23538,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.educ-wrapper[data-v-44e566ff]{\n    padding:20px;\n    background-color: rgb(243, 243, 243);\n    border-radius: 5px;\n    margin-top: 5px;\n}\n.img-wrapper[data-v-44e566ff]{\n    height:100px;\n}\nh2[data-v-44e566ff] {\n    width: 100%;\n    text-align: center;\n    border-bottom: 1px solid #000;\n    line-height: 0.1em;\n    margin: 10px 0 20px;\n}\nh2 span[data-v-44e566ff] {\n    background:#fff;\n    padding:0 10px;\n}\n\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.educ-wrapper[data-v-44e566ff]{\n     padding:20px;\n     background-color: rgb(243, 243, 243);\n     border-radius: 5px;\n     margin-top: 5px;\n}\n.img-wrapper[data-v-44e566ff]{\n     height:100px;\n}\nh2[data-v-44e566ff] {\n     width: 100%;\n     text-align: center;\n     border-bottom: 1px solid #000;\n     line-height: 0.1em;\n     margin: 10px 0 20px;\n}\nh2 span[data-v-44e566ff] {\n     background:#fff;\n     padding:0 10px;\n}\n.avatar-container[data-v-44e566ff]{\n    height: 200px;\n    width: 165px;\n    border: 1px solid #d0d0d0;\n}\n.avatar-container img[data-v-44e566ff]{\n    width: inherit;\n    height: inherit;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\n\n\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37475,23 +37485,34 @@ var render = function() {
           "div",
           { staticClass: "column is-8 is-offset-2" },
           _vm._l(this.newsFeeds, function(newsfeed, index) {
-            return _c("div", { key: index, staticClass: "newsfeed-wrapper" }, [
-              _c("div", { staticClass: "newsfeed-header" }, [
-                _vm._v(
-                  "\n                       " +
-                    _vm._s(new Date(newsfeed.created_at)) +
-                    "\n                   "
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", [
-                _vm._v(
-                  "\n                        " +
-                    _vm._s(newsfeed.news) +
-                    "\n                    "
-                )
-              ])
-            ])
+            return _c(
+              "div",
+              { key: index, staticClass: "newsfeed-wrapper panel" },
+              [
+                _c("div", { staticClass: "newsfeed-header" }, [
+                  _c(
+                    "span",
+                    {
+                      staticStyle: {
+                        "font-size": "12px",
+                        "font-weight": "bold"
+                      }
+                    },
+                    [_vm._v(_vm._s(new Date(newsfeed.created_at)))]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("div", { staticClass: "announcement-text" }, [
+                    _vm._v("ANNOUNCEMENT")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "announcement-body" }, [
+                    _vm._v(_vm._s(newsfeed.news))
+                  ])
+                ])
+              ]
+            )
           }),
           0
         )
@@ -37560,81 +37581,106 @@ var render = function() {
                               }
                             },
                             [
-                              _c(
-                                "div",
-                                [
-                                  _c("div", [
-                                    _c("img", {
-                                      staticClass: "img-wrapper",
-                                      attrs: {
-                                        src: _vm.fields.profile_image,
-                                        alt: "..."
+                              _c("div", { staticClass: "columns" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "column" },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "avatar-container" },
+                                      [
+                                        _c("img", {
+                                          attrs: {
+                                            src: _vm.fields.profile_image,
+                                            alt: "..."
+                                          },
+                                          on: { click: _vm.openModal }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "b-field",
+                                      {
+                                        staticClass: "file",
+                                        class: { "has-name": !_vm.fields.image }
                                       },
-                                      on: { click: _vm.openModal }
-                                    })
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-field",
-                                    {
-                                      staticClass: "file",
-                                      class: { "has-name": !_vm.fields.image }
-                                    },
-                                    [
-                                      _c(
-                                        "b-upload",
-                                        {
-                                          staticClass: "file-label",
-                                          model: {
-                                            value: _vm.fields.image,
-                                            callback: function($$v) {
-                                              _vm.$set(_vm.fields, "image", $$v)
-                                            },
-                                            expression: "fields.image"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "span",
-                                            { staticClass: "file-cta" },
-                                            [
-                                              _c("b-icon", {
-                                                staticClass: "file-icon",
-                                                attrs: { icon: "upload" }
-                                              }),
-                                              _vm._v(" "),
-                                              _c(
-                                                "span",
-                                                { staticClass: "file-label" },
-                                                [_vm._v("Click to upload")]
-                                              )
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _vm.fields.image
-                                            ? _c(
-                                                "span",
-                                                { staticClass: "file-name" },
-                                                [
-                                                  _vm._v(
-                                                    " " +
-                                                      _vm._s(
-                                                        _vm.fields.image.name
-                                                      ) +
-                                                      " "
-                                                  )
-                                                ]
-                                              )
-                                            : _vm._e()
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
+                                      [
+                                        _c(
+                                          "b-upload",
+                                          {
+                                            staticClass: "file-label",
+                                            model: {
+                                              value: _vm.fields.image,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.fields,
+                                                  "image",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "fields.image"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "span",
+                                              { staticClass: "file-cta" },
+                                              [
+                                                _c("b-icon", {
+                                                  staticClass: "file-icon",
+                                                  attrs: { icon: "upload" }
+                                                }),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "span",
+                                                  { staticClass: "file-label" },
+                                                  [_vm._v("Click to upload")]
+                                                )
+                                              ],
+                                              1
+                                            ),
+                                            _vm._v(" "),
+                                            _vm.fields.image
+                                              ? _c(
+                                                  "span",
+                                                  { staticClass: "file-name" },
+                                                  [
+                                                    _vm._v(
+                                                      " " +
+                                                        _vm._s(
+                                                          _vm.fields.image.name
+                                                        ) +
+                                                        " "
+                                                    )
+                                                  ]
+                                                )
+                                              : _vm._e()
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticStyle: {
+                                          color: "red",
+                                          "font-style": "italic"
+                                        }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "Image size limit to 300kb only."
+                                        )
+                                      ]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]),
                               _vm._v(" "),
                               _c("div", { staticClass: "columns" }, [
                                 _c(

@@ -40,10 +40,7 @@ class ProfilePageController extends Controller
     }
 
     public function getEligibility(){
-
-
         $id = Auth::user()->user_id;
-
         return Eligibility::where('user_id', $id)
         ->get();
     }
@@ -65,14 +62,28 @@ class ProfilePageController extends Controller
     }
 
     public function updateMyInfo(Request $req){
-        
+
         $file = $req->file('profile_image');
+        if($file){
+            $req->validate([
+                'lname' => ['required', 'string', 'max: 100'],
+                'fname' => ['required', 'string', 'max: 100'],
+                'sex' => ['required', 'string', 'max: 15'],
+                'profile_image' => ['mimes:jpg,png']
+            ]);
+        }else{
+            $req->validate([
+                'lname' => ['required', 'string', 'max: 100'],
+                'fname' => ['required', 'string', 'max: 100'],
+                'sex' => ['required', 'string', 'max: 15'],
+            ]);
+        }
+
         if($file){
             $file_path = $file->store('public/profile_image');
             $file_explode = explode('/', $file_path);
             $file_path = 'storage/' . $file_explode[1] . '/' .$file_explode[2];
         }
-
 
         $id = Auth::user()->user_id;
 
@@ -85,7 +96,10 @@ class ProfilePageController extends Controller
         $data->civil_status = $req->civil_status;
         $data->suffix = $req->suffix;
         $data->alumni_classification = $req->alumni_classification;
-        $data->profile_image = $file ? $file_path : null;
+        if($file){
+            $data->profile_image = $file_path;
+            //if data has a file,, save
+        }
         $data->email = $req->email;
         $data->fb_account = $req->fb_account;
         $data->contact_number = $req->contact_number;
