@@ -17,34 +17,48 @@ class UserSeeder extends Seeder
         //
         $users = [
             [
-                'username' => 'admin',
-                'lname' => 'PENAS',
-                'fname' => 'BERNARD',
-                'mname' => 'SABALA',
-                'email' => 'penas@gmail.com',
+                'username' => 'eshen',
+                'lname' => 'AMPZ',
+                'fname' => 'ETIENNE',
+                'mname' => '',
+                'email' => 'admin@admin.com',
                 'role' => 'ADMIN',
                 'sex' => 'MALE',
-                'contact_number' => '09123456789',
+                'contact_number' => '9167789585',
                 'program' => 'BSCS',
                 'year_graduated' => null,
-                'password' => Hash::make('a'),
+                'password' => Hash::make('@lumni-112233'),
 
             ],
             [
-                'username' => 'alumni',
-                'lname' => 'CABASAG',
-                'fname' => 'MARITCHO',
-                'mname' => 'ANTIPUESTO',
-                'email' => 'cabasag@gmail.com',
-                'role' => 'ALUMNI',
+                'username' => 'anacion',
+                'lname' => 'NACION',
+                'fname' => 'ALEXANDER',
+                'mname' => '',
+                'email' => 'nacion@admin.com',
+                'role' => 'ADMIN',
                 'sex' => 'MALE',
-                'contact_number' => '09123456784',
-                'program' => 'BSCS',
+                'contact_number' => '',
+                'program' => 'ADMIN',
                 'year_graduated' => null,
-                'password' => Hash::make('a'),
+                'password' => Hash::make('g@dtc-nacion'),
+            ],
+            [
+                'username' => 'cherryl',
+                'lname' => 'MINA',
+                'fname' => 'CHERRYL',
+                'mname' => 'S',
+                'email' => 'cmina@admin.com',
+                'role' => 'ADMIN',
+                'sex' => 'FEMALE',
+                'contact_number' => '',
+                'program' => 'ADMIN',
+                'year_graduated' => null,
+                'password' => Hash::make('g@dtc-mina'),
             ]
-         ];
 
-         User::insertOrIgnore($users);
+        ];
+
+        User::insertOrIgnore($users);
     }
 }

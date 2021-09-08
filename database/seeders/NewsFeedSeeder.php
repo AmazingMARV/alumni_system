@@ -17,13 +17,13 @@ class NewsFeedSeeder extends Seeder
         //
         $news=[
             [
-            'news' => 'this is no 1 sample news/events'
+            'news' => 'WELCOME TO ALUMNI PORTAL'
              ],
              [
-            'news' => 'this is no 2 sample news/events'
+            'news' => 'ANNOUNCEMENT WILL BE POSTED HERE...'
              ]
         ];
-        
+
         NewsFeed::insertOrIgnore($news);
     }
 }
