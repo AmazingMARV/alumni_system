@@ -7,7 +7,7 @@
                         <div class="column is-4 is-offset-4">
                             <div class="panel">
                                 <div class="panel-heading">
-                                    GADTC ALUMNI TRACER
+                                    TCGC (Formerly GADTC) ALUMNI TRACER
                                 </div>
                                 <div class="panel-body">
                                     <form @submit.prevent="submit">

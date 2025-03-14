@@ -7,10 +7,10 @@
                         <img src="img/logo.png" class="my-img"/>
                     </div>
                     <div class="title">
-                        WELCOME TO GADTC ALUMNI TRACER SYSTEM
+                        WELCOME TO TCGC (Formerly GADTC) ALUMNI TRACER SYSTEM
                     </div>
                     <div class="subtitle">
-                        GADTC Alumni Records.
+                        TCGC Alumni Records.
                     </div>
                     <div class="buttons is-centered">
                         <a href="/login" class="button is-primary is-outlined">
